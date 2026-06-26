@@ -7,6 +7,18 @@
 <meta name="description" content="Vertigo Records — Berlin psychedelic / psytrance label, est. 2006. Releases, roster, flagship artists, support, and booking.">
 <link rel="icon" href="img/vertigo_logo.png">
 <meta name="theme-color" content="#06040E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vertigo Records">
+<meta property="og:title" content="Vertigo Records — Berlin Psychedelic Label">
+<meta property="og:description" content="Independent psychedelic label from Berlin — releasing music and booking live artists since 2006.">
+<meta property="og:url" content="https://shtryxlabs.github.io/vertigo-epk/">
+<meta property="og:image" content="https://shtryxlabs.github.io/vertigo-epk/img/og/vertigo_og.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vertigo Records — Berlin Psychedelic Label">
+<meta name="twitter:description" content="Independent psychedelic label from Berlin — releasing music and booking live artists since 2006.">
+<meta name="twitter:image" content="https://shtryxlabs.github.io/vertigo-epk/img/og/vertigo_og.png">
 <link rel="stylesheet" href="fonts.css">
 <style>
   :root{
@@ -48,7 +60,7 @@
   h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4.4vw,48px);line-height:1.05;color:#fff}
   .section-copy{max-width:620px;color:#aaa1d0;font-size:16px}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  @media(max-width:820px){.grid{grid-template-columns:1fr}.release-list{grid-template-columns:1fr}.section-head{display:block}.section-copy{margin-top:12px}.nav-links{display:none}}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}.section-head{display:block}.section-copy{margin-top:12px}.nav-links{display:none}}
   .card{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:24px;min-height:180px;transition:.2s}
   .card:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);transform:translateY(-2px)}
   .card h3{font-family:'Space Grotesk',sans-serif;font-size:24px;color:#fff;margin-top:10px}
@@ -70,13 +82,35 @@
   .artist-logo{display:block;height:52px;width:auto;max-width:88%;object-fit:contain;margin-top:10px}
   .artist-logo.seddler-logo{height:62px}
 
-  .release-list{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px}
-  .release-item{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;padding:11px 12px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(255,255,255,.026)}
-  .release-num{font-family:'Space Mono',monospace;font-size:11px;color:#756d9b}
-  .release-main strong{display:block;color:#eeeaf8;font-family:'Space Grotesk',sans-serif;font-size:15px;line-height:1.15}
-  .release-main em{display:block;margin-top:3px;color:#9d95bf;font-style:normal;font-size:12.5px}
-  .release-verify{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#D8A542;border:1px solid rgba(216,165,66,.35);border-radius:999px;padding:4px 7px}
-  .release-item.needs{border-color:rgba(216,165,66,.16);background:rgba(216,165,66,.035)}
+  .catalog-top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:20px}
+  .catalog-stats{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+  .catalog-stats span{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#c8c1e4;border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:7px 10px;background:rgba(255,255,255,.03)}
+  .essential-block{margin:30px 0 34px}
+  .catalog-subhead{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:16px}
+  .catalog-subhead h3{font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,3.4vw,34px);line-height:1.05;color:#fff}
+  .catalog-subhead p{max-width:520px;color:#aaa1d0;font-size:14.5px}
+  .essential-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  .essential-grid .catalog-card{background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035))}
+  .catalog-controls{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:4px 0 18px}
+  .catalog-filters{display:flex;gap:8px;flex-wrap:wrap}
+  .catalog-filter{min-height:36px;padding:9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);color:#c8c1e4;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+  .catalog-filter.is-active{border-color:rgba(34,214,255,.55);color:#fff;background:rgba(34,214,255,.12)}
+  .catalog-search{width:min(280px,100%);min-height:40px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.04);color:#fff;padding:10px 14px;font:500 13px 'Manrope',sans-serif;outline:0}
+  .catalog-search::placeholder{color:#8f87b4}
+  .catalog-search:focus{border-color:rgba(34,214,255,.6);box-shadow:0 0 0 3px rgba(34,214,255,.08)}
+  .catalog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  .catalog-card{display:block;overflow:hidden;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(255,255,255,.035);transition:.2s}
+  .catalog-card:hover{border-color:rgba(34,214,255,.38);background:rgba(255,255,255,.06);transform:translateY(-2px)}
+  .catalog-cover{display:block;aspect-ratio:1;background:linear-gradient(135deg,rgba(255,75,196,.15),rgba(34,214,255,.12))}
+  .catalog-cover img{display:block;width:100%;height:100%;object-fit:cover}
+  .catalog-meta{display:block;padding:14px 14px 16px;min-height:168px}
+  .catalog-num{display:block;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;color:#756d9b;margin-bottom:9px}
+  .catalog-meta strong{display:block;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:18px;line-height:1.08}
+  .catalog-meta em{display:block;margin-top:7px;color:#aaa1d0;font-style:normal;font-size:13px;line-height:1.25}
+  .catalog-action{display:inline-block;margin-top:14px;color:#fff;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+  .catalog-empty{display:none;margin-top:18px;color:#aaa1d0}
+  @media(max-width:980px){.catalog-grid,.essential-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.catalog-controls{display:block}.catalog-search{margin-top:12px;width:100%}}
+  @media(max-width:680px){.catalog-top,.catalog-subhead{display:block}.catalog-stats{justify-content:flex-start;margin-top:14px}.catalog-grid,.essential-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.catalog-meta{min-height:154px;padding:12px}.catalog-meta strong{font-size:16px}.catalog-subhead p{margin-top:8px}}
   .roster{display:flex;flex-wrap:wrap;gap:9px}
   .pill{font-size:12.5px;color:#c6bfdf;border:1px solid rgba(255,255,255,.10);border-radius:999px;padding:8px 14px;background:rgba(255,255,255,.025)}
   .support{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -93,8 +127,8 @@
       <a class="nav-brand" href="#top">VERTIGO RECORDS</a>
       <div class="nav-links">
         <a href="#listen">Listen</a>
+        <a href="#releases">Catalog</a>
         <a href="#artists">Artists</a>
-        <a href="#releases">Releases</a>
         <a href="#roster">Roster</a>
         <a href="#support">Support</a>
         <a href="#booking">Booking</a>
@@ -110,7 +144,7 @@
         <h1>Twenty years of<br>psychedelic music.</h1>
         <p class="lead">Vertigo Records is an independent psychedelic label from Berlin — releasing music and booking live artists since 2006.</p>
         <div class="actions">
-          <a class="btn primary" href="https://vertigorecords.bandcamp.com/">Listen / Buy on Bandcamp</a>
+          <a class="btn primary" href="#releases">Explore Catalog</a>
           <a class="btn" href="#booking">Artist Booking</a>
         </div>
       </div>
@@ -149,92 +183,45 @@
       <div class="wrap">
         <div class="section-head">
           <div>
-            <div class="mono">Catalog inventory</div>
-            <h2>Releases list.</h2>
+            <div class="mono">Label catalog</div>
+            <h2>79 releases, one archive.</h2>
           </div>
-          <p class="section-copy">Imported from the current Vertigo catalog list. Items marked verify need exact artist-credit confirmation before a public sales push.</p>
+          <p class="section-copy">The Vertigo Records catalog is the center of the label story: real releases, real artwork, direct Bandcamp links, and two decades of psychedelic music history.</p>
         </div>
-        <ol class="release-list">
-          <li class="release-item"><span class="release-num">01</span><span class="release-main"><strong>Festival Cowboys (Chap1)</strong><em>Hazedaze</em></span></li>
-          <li class="release-item"><span class="release-num">02</span><span class="release-main"><strong>Hampelmania</strong><em>Kcapsmur</em></span></li>
-          <li class="release-item"><span class="release-num">03</span><span class="release-main"><strong>Smell of Memory</strong><em>Edcora</em></span></li>
-          <li class="release-item"><span class="release-num">04</span><span class="release-main"><strong>Vertigo&#x27;s XXth Anniversary Compilation</strong><em>VA</em></span></li>
-          <li class="release-item needs"><span class="release-num">05</span><span class="release-main"><strong>Modern Wizards</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">06</span><span class="release-main"><strong>Insight from Outsight</strong><em>Hazedays</em></span></li>
-          <li class="release-item"><span class="release-num">07</span><span class="release-main"><strong>Future Frequency</strong><em>Interconnekted</em></span></li>
-          <li class="release-item"><span class="release-num">08</span><span class="release-main"><strong>Dazzle Puzzle Part 2</strong><em>Hazedays</em></span></li>
-          <li class="release-item"><span class="release-num">09</span><span class="release-main"><strong>Psychedelic Oligarchs</strong><em>Various Artists</em></span></li>
-          <li class="release-item"><span class="release-num">10</span><span class="release-main"><strong>We Are The One</strong><em>Astral</em></span></li>
-          <li class="release-item"><span class="release-num">11</span><span class="release-main"><strong>Dazzle Pazzle Part 1</strong><em>Hazedays</em></span></li>
-          <li class="release-item"><span class="release-num">12</span><span class="release-main"><strong>Nomadic Tribe</strong><em>ASTRAL</em></span></li>
-          <li class="release-item"><span class="release-num">13</span><span class="release-main"><strong>Sound Poetry</strong><em>Hazedays</em></span></li>
-          <li class="release-item"><span class="release-num">14</span><span class="release-main"><strong>Divine Beast</strong><em>Interconnekted</em></span></li>
-          <li class="release-item"><span class="release-num">15</span><span class="release-main"><strong>Of Air And Fire</strong><em>Mesopotamus</em></span></li>
-          <li class="release-item"><span class="release-num">16</span><span class="release-main"><strong>Saikosapiens</strong><em>Overdream</em></span></li>
-          <li class="release-item"><span class="release-num">17</span><span class="release-main"><strong>Intoo Space</strong><em>Interconnekted</em></span></li>
-          <li class="release-item"><span class="release-num">18</span><span class="release-main"><strong>Cosmic Recreation</strong><em>Paramatma</em></span></li>
-          <li class="release-item"><span class="release-num">19</span><span class="release-main"><strong>Fables of Crystal Land</strong><em>Derker</em></span></li>
-          <li class="release-item"><span class="release-num">20</span><span class="release-main"><strong>Evolution</strong><em>Phillax</em></span></li>
-          <li class="release-item"><span class="release-num">21</span><span class="release-main"><strong>Icy World</strong><em>Paramatma</em></span></li>
-          <li class="release-item"><span class="release-num">22</span><span class="release-main"><strong>Unreal Fun 2</strong><em>VA</em></span></li>
-          <li class="release-item"><span class="release-num">23</span><span class="release-main"><strong>Peace Down Under (24bit)</strong><em>Free Standing Pickles / Logman n Pstump / alaztair:Godfrey</em></span></li>
-          <li class="release-item"><span class="release-num">24</span><span class="release-main"><strong>Exotic Fruits (24bit)</strong><em>Fungus Funk / Derker</em></span></li>
-          <li class="release-item"><span class="release-num">25</span><span class="release-main"><strong>Liquid Space Discovery</strong><em>Samadhi</em></span></li>
-          <li class="release-item"><span class="release-num">26</span><span class="release-main"><strong>Quark Porridge</strong><em>Khaiku</em></span></li>
-          <li class="release-item needs"><span class="release-num">27</span><span class="release-main"><strong>ReVertigo 3</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">28</span><span class="release-main"><strong>Storming Minds EP</strong><em>Derker</em></span></li>
-          <li class="release-item"><span class="release-num">29</span><span class="release-main"><strong>Unreal Fun</strong><em>VA</em></span></li>
-          <li class="release-item"><span class="release-num">30</span><span class="release-main"><strong>Sunscript EP</strong><em>Lucid Mantra / H-Sunrise</em></span></li>
-          <li class="release-item"><span class="release-num">31</span><span class="release-main"><strong>Blastourist EP</strong><em>Blastourist</em></span></li>
-          <li class="release-item"><span class="release-num">32</span><span class="release-main"><strong>Being Nothing</strong><em>Hardcore Buddhist</em></span></li>
-          <li class="release-item needs"><span class="release-num">33</span><span class="release-main"><strong>Namaste From Russia 3</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item needs"><span class="release-num">34</span><span class="release-main"><strong>FroZen DeLights</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">35</span><span class="release-main"><strong>Molecular Synth</strong><em>Anarkick</em></span></li>
-          <li class="release-item"><span class="release-num">36</span><span class="release-main"><strong>DMTV</strong><em>Nirmal</em></span></li>
-          <li class="release-item"><span class="release-num">37</span><span class="release-main"><strong>Eyes Cold</strong><em>Frosty Fennic</em></span></li>
-          <li class="release-item"><span class="release-num">38</span><span class="release-main"><strong>Vertigo All Around (12 Years In Space)</strong><em>VA</em></span></li>
-          <li class="release-item"><span class="release-num">39</span><span class="release-main"><strong>Stormbringer</strong><em>Synergic</em></span></li>
-          <li class="release-item"><span class="release-num">40</span><span class="release-main"><strong>ReVertiGo 2</strong><em>VA</em></span></li>
-          <li class="release-item"><span class="release-num">41</span><span class="release-main"><strong>Spooky Disco</strong><em>Phillax</em></span></li>
-          <li class="release-item"><span class="release-num">42</span><span class="release-main"><strong>Common Scent</strong><em>Kaiku</em></span></li>
-          <li class="release-item"><span class="release-num">43</span><span class="release-main"><strong>The Paragraph</strong><em>Soladria</em></span></li>
-          <li class="release-item"><span class="release-num">44</span><span class="release-main"><strong>ZenO&#x27;Clock</strong><em>Trippy Trail</em></span></li>
-          <li class="release-item"><span class="release-num">45</span><span class="release-main"><strong>Peace and Love III</strong><em>VA</em></span></li>
-          <li class="release-item"><span class="release-num">46</span><span class="release-main"><strong>ReVertiGo</strong><em>VA</em></span></li>
-          <li class="release-item"><span class="release-num">47</span><span class="release-main"><strong>Time For Solution</strong><em>Trold</em></span></li>
-          <li class="release-item needs"><span class="release-num">48</span><span class="release-main"><strong>Compos Mentis</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">49</span><span class="release-main"><strong>Antiethno</strong><em>Transdriver</em></span></li>
-          <li class="release-item"><span class="release-num">50</span><span class="release-main"><strong>Equilibrium</strong><em>Andromeda</em></span></li>
-          <li class="release-item"><span class="release-num">51</span><span class="release-main"><strong>Electronic Evolution</strong><em>Terrafractyl</em></span></li>
-          <li class="release-item"><span class="release-num">52</span><span class="release-main"><strong>Sine Qua Non</strong><em>Yudhisthira</em></span></li>
-          <li class="release-item needs"><span class="release-num">53</span><span class="release-main"><strong>Twenty Five Reasons for Life</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">54</span><span class="release-main"><strong>Culture Vulture</strong><em>Various Artists</em></span></li>
-          <li class="release-item"><span class="release-num">55</span><span class="release-main"><strong>Peace and Love 2</strong><em>VA</em></span></li>
-          <li class="release-item"><span class="release-num">56</span><span class="release-main"><strong>Launch For Lanctus</strong><em>Delirious Noon</em></span></li>
-          <li class="release-item needs"><span class="release-num">57</span><span class="release-main"><strong>Secret Vision</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item needs"><span class="release-num">58</span><span class="release-main"><strong>Omnipresence</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">59</span><span class="release-main"><strong>Namaste From Russia 2</strong><em>VA</em></span></li>
-          <li class="release-item needs"><span class="release-num">60</span><span class="release-main"><strong>25th Frame</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">61</span><span class="release-main"><strong>Deja Vu Fabrique</strong><em>Zolod</em></span></li>
-          <li class="release-item needs"><span class="release-num">62</span><span class="release-main"><strong>The Meaning of Life</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item needs"><span class="release-num">63</span><span class="release-main"><strong>In Your Mind</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item needs"><span class="release-num">64</span><span class="release-main"><strong>Liquid Quit</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">65</span><span class="release-main"><strong>Dream Selector</strong><em>Ocelot</em></span></li>
-          <li class="release-item"><span class="release-num">66</span><span class="release-main"><strong>Peace and Love</strong><em>VA</em></span></li>
-          <li class="release-item needs"><span class="release-num">67</span><span class="release-main"><strong>The Sacred Tree</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item needs"><span class="release-num">68</span><span class="release-main"><strong>The Night Tribe</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">69</span><span class="release-main"><strong>Rules of Ohm</strong><em>Abnormal Project</em></span></li>
-          <li class="release-item"><span class="release-num">70</span><span class="release-main"><strong>Furious – Not for Fame</strong><em>Furious</em></span></li>
-          <li class="release-item needs"><span class="release-num">71</span><span class="release-main"><strong>Debut</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item needs"><span class="release-num">72</span><span class="release-main"><strong>AcidSport</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">73</span><span class="release-main"><strong>Betwen Night and Day</strong><em>Transdriver</em></span></li>
-          <li class="release-item needs"><span class="release-num">74</span><span class="release-main"><strong>Yes or No</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">75</span><span class="release-main"><strong>Namaste From Russia</strong><em>VA</em></span></li>
-          <li class="release-item"><span class="release-num">76</span><span class="release-main"><strong>Overdrive</strong><em>Terminator / Dejan</em></span></li>
-          <li class="release-item needs"><span class="release-num">77</span><span class="release-main"><strong>Nowhereland</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item needs"><span class="release-num">78</span><span class="release-main"><strong>Timeless Flash</strong><em>NEEDS_VERIFICATION</em></span><span class="release-verify">verify</span></li>
-          <li class="release-item"><span class="release-num">79</span><span class="release-main"><strong>Oddball (Uptempo ReRub)</strong><em>OOOD</em></span></li>
-        </ol>
+        <div class="catalog-top">
+          <a class="btn primary" href="https://vertigorecords.bandcamp.com/music" target="_blank" rel="noopener">Open Full Bandcamp Catalog</a>
+          <div class="catalog-stats" aria-label="Catalog stats">
+            <span data-catalog-count>79 releases</span>
+            <span>Bandcamp direct</span>
+            <span>Est. 2006</span>
+          </div>
+        </div>
+        <div class="essential-block">
+          <div class="catalog-subhead">
+            <div>
+              <div class="mono">Essential Vertigo</div>
+              <h3>Start with the vortex.</h3>
+            </div>
+            <p>Key releases and archive markers that show the label's range, history, and psychedelic weight.</p>
+          </div>
+          <div class="essential-grid" data-essential-grid></div>
+        </div>
+        <div class="catalog-controls">
+          <div class="catalog-filters" aria-label="Catalog filters">
+            <button class="catalog-filter is-active" type="button" data-filter="all">All</button>
+            <button class="catalog-filter" type="button" data-filter="essential">Essential</button>
+            <button class="catalog-filter" type="button" data-filter="compilation">VA / Compilations</button>
+            <button class="catalog-filter" type="button" data-filter="artist">Artist Albums</button>
+            <button class="catalog-filter" type="button" data-filter="single">Singles / EPs</button>
+            <button class="catalog-filter" type="button" data-filter="archive">Archive Series</button>
+          </div>
+          <input class="catalog-search" type="search" data-catalog-search placeholder="Search catalog" aria-label="Search catalog">
+        </div>
+        <div class="catalog-grid" data-catalog-grid aria-live="polite"></div>
+        <p class="catalog-empty" data-catalog-empty>No matching releases.</p>
+        <noscript>
+          <p class="section-copy" style="margin-top:18px">Open the full catalog on Bandcamp: https://vertigorecords.bandcamp.com/music</p>
+        </noscript>
       </div>
     </section>
 
@@ -245,7 +232,7 @@
             <div class="mono">Artists · For booking</div>
             <h2>Booking-ready worlds.</h2>
           </div>
-          <p class="section-copy">The Vertigo label artists currently available for booking — across hybrid-live techno, psychedelic psytrance, and deep cosmic goa.</p>
+          <p class="section-copy">The Vertigo label artists currently available for booking — from hybrid-live techno to full-power psychedelic psytrance, night and day.</p>
         </div>
         <div class="grid">
           <a class="card artist-card seddler" href="seddler.html">
@@ -261,9 +248,9 @@
             <span class="link">View EPK -></span>
           </a>
           <a class="card artist-card now" href="nowhereman.html">
-            <div class="mono">Goa · Melodic techno</div>
+            <div class="mono">Psytrance · Melodic techno</div>
             <h3><img class="artist-logo" src="img/logos/nowhereman_wordmark_transparent.svg?v=transparent-20260626" alt="Nowhereman"></h3>
-            <p>Timeless goa journeys — and melodic / progressive techno DJ sets.</p>
+            <p>Full-power, crystal-clear psytrance — night and day — plus melodic, progressive techno DJ sets.</p>
             <span class="link">View EPK -></span>
           </a>
         </div>
@@ -350,5 +337,6 @@
       <div class="legal"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div>
     </div>
   </footer>
+  <script src="catalog-data.js"></script>
 </body>
 </html>
