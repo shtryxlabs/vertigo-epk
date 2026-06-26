@@ -550,21 +550,29 @@ const VERTIGO_CATALOG = [
     return true;
   }
 
+  function typeMeta(release){
+    if (essentialTitles.has(release.title)) return { label: 'Essential', cls: 'essential' };
+    if (isCompilation(release)) return { label: 'VA', cls: 'va' };
+    if (isSingleOrEp(release)) return { label: 'EP', cls: 'ep' };
+    if (isArchiveSeries(release)) return { label: 'Archive', cls: 'archive' };
+    return { label: 'Album', cls: 'album' };
+  }
+
   function cardTemplate(release){
-    const releaseNumber = VERTIGO_CATALOG.indexOf(release) + 1;
+    const index = VERTIGO_CATALOG.indexOf(release);
     const title = escapeHtml(release.title);
     const artist = escapeHtml(release.artist);
     const url = escapeHtml(release.url);
     const cover = escapeHtml(release.cover);
+    const t = typeMeta(release);
     return `
-      <a class="catalog-card" href="${url}" target="_blank" rel="noopener">
-        <span class="catalog-cover"><img src="${cover}" alt="${title} cover" loading="lazy"></span>
-        <span class="catalog-meta">
-          <span class="catalog-num">${String(releaseNumber).padStart(2, '0')}</span>
-          <strong>${title}</strong>
-          <em>${artist}</em>
-          <span class="catalog-action">Listen / Buy -&gt;</span>
+      <a class="catalog-card" href="${url}" target="_blank" rel="noopener" data-index="${index}">
+        <span class="catalog-cover">
+          <img src="${cover}" alt="${title} cover" loading="lazy">
+          <span class="catalog-badge ${t.cls}">${t.label}</span>
+          <span class="catalog-hover"><span>Quick view</span></span>
         </span>
+        <span class="catalog-cap"><strong>${title}</strong><em>${artist}</em></span>
       </a>
     `;
   }
@@ -598,5 +606,67 @@ const VERTIGO_CATALOG = [
   });
 
   if (search) search.addEventListener('input', render);
+
+  // Quick-view modal
+  const modal = document.createElement('div');
+  modal.className = 'qv-backdrop';
+  modal.innerHTML =
+    '<div class="qv" role="dialog" aria-modal="true" aria-label="Release details">' +
+      '<button class="qv-close" type="button" aria-label="Close">×</button>' +
+      '<div class="qv-cover"><img alt=""></div>' +
+      '<div class="qv-body">' +
+        '<div class="qv-type"></div>' +
+        '<div class="qv-title"></div>' +
+        '<div class="qv-artist"></div>' +
+        '<div class="qv-actions">' +
+          '<a class="qv-btn primary" target="_blank" rel="noopener">Listen / Buy on Bandcamp</a>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(modal);
+  const qv = {
+    cover: modal.querySelector('.qv-cover img'),
+    type: modal.querySelector('.qv-type'),
+    title: modal.querySelector('.qv-title'),
+    artist: modal.querySelector('.qv-artist'),
+    buy: modal.querySelector('.qv-btn'),
+    close: modal.querySelector('.qv-close')
+  };
+  let lastFocus = null;
+
+  function openModal(release){
+    const t = typeMeta(release);
+    qv.cover.src = release.cover;
+    qv.cover.alt = release.title + ' cover';
+    qv.type.textContent = t.label;
+    qv.title.textContent = release.title;
+    qv.artist.textContent = release.artist;
+    qv.buy.href = release.url;
+    lastFocus = document.activeElement;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    qv.close.focus();
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target === qv.close) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+  function onCardClick(e){
+    const card = e.target.closest('.catalog-card');
+    if (!card) return;
+    e.preventDefault();
+    const release = VERTIGO_CATALOG[parseInt(card.dataset.index, 10)];
+    if (release) openModal(release);
+  }
+  grid.addEventListener('click', onCardClick);
+  if (essentialGrid) essentialGrid.addEventListener('click', onCardClick);
+
   render();
 })();
