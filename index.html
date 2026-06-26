@@ -142,6 +142,20 @@
   footer a{border-bottom:1px solid rgba(255,255,255,.16)}
   footer a:hover{color:#fff;border-color:#fff}
   .legal{margin-top:14px;font-size:12px}
+  .mixes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:820px){.mixes-grid{grid-template-columns:1fr}}
+  .mix-card{display:block;padding:22px;border:1px solid rgba(255,255,255,.08);border-left:3px solid var(--cyan);border-radius:8px;background:rgba(255,255,255,.035);text-decoration:none;transition:.2s}
+  .mix-card:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);transform:translateY(-2px)}
+  .mix-card.seddler{border-left-color:#D10F1F}
+  .mix-card.klep{border-left-color:#F6B73C}
+  .mix-card.now{border-left-color:#D8A542}
+  .mix-artist{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#aaa1d0;margin-bottom:10px}
+  .mix-card.seddler .mix-artist{color:#ff5a4a}
+  .mix-card.klep .mix-artist{color:#F6B73C}
+  .mix-card.now .mix-artist{color:#D8A542}
+  .mix-title{font-family:'Space Grotesk',sans-serif;font-size:17px;color:#fff;line-height:1.2}
+  .mix-action{display:inline-block;margin-top:16px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#cfc7f0}
+  .mix-card:hover .mix-action{color:#fff}
 </style>
 </head>
 <body>
@@ -152,6 +166,7 @@
         <a href="#listen">Listen</a>
         <a href="#releases">Catalog</a>
         <a href="#artists">Artists</a>
+        <a href="#mixes">Mixes</a>
         <a href="#story">Story</a>
         <a href="#roster">Roster</a>
         <a href="#support">Support</a>
@@ -276,6 +291,50 @@
             <h3><img class="artist-logo" src="img/logos/nowhereman_wordmark_transparent.svg?v=transparent-20260626" alt="Nowhereman"></h3>
             <p>Full-power, crystal-clear psytrance — night and day — plus melodic, progressive techno DJ sets.</p>
             <span class="link">View EPK -></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mixes">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="mono">Listen · Mixes</div>
+            <h2>Selected sets.</h2>
+          </div>
+          <p class="section-copy">Recent guest mixes and live sets from the Vertigo artists — straight to SoundCloud.</p>
+        </div>
+        <div class="mixes-grid">
+          <a class="mix-card seddler" href="https://soundcloud.com/seddler/seddler-synthetic-breath-radiozora-guest-mix" target="_blank" rel="noopener">
+            <div class="mix-artist">SEDDLER</div>
+            <div class="mix-title">Radiozora — Synthetic Breath (Guest Mix 2026)</div>
+            <span class="mix-action">Play on SoundCloud -></span>
+          </a>
+          <a class="mix-card seddler" href="https://soundcloud.com/seddler/ufo-bufo-10th-anniversary-2025" target="_blank" rel="noopener">
+            <div class="mix-artist">SEDDLER</div>
+            <div class="mix-title">UFO BUFO 2025 — Live Set</div>
+            <span class="mix-action">Play on SoundCloud -></span>
+          </a>
+          <a class="mix-card klep" href="https://soundcloud.com/klepsydramusic/winter-solstice-light-radiozora-exclusive-guest-mix" target="_blank" rel="noopener">
+            <div class="mix-artist">klePSYdra</div>
+            <div class="mix-title">Radiozora — Winter Solstice Light (Exclusive Mix)</div>
+            <span class="mix-action">Play on SoundCloud -></span>
+          </a>
+          <a class="mix-card klep" href="https://soundcloud.com/klepsydramusic/klepsydra-taj-psy-festival-dj-mix-2024" target="_blank" rel="noopener">
+            <div class="mix-artist">klePSYdra</div>
+            <div class="mix-title">Taj Psy Festival — DJ Mix 2024 (funk psy-prog)</div>
+            <span class="mix-action">Play on SoundCloud -></span>
+          </a>
+          <a class="mix-card now" href="https://soundcloud.com/vertigo-records/delirious-noon-nowhereman" target="_blank" rel="noopener">
+            <div class="mix-artist">Nowhereman</div>
+            <div class="mix-title">Delirious Noon &amp; Nowhereman — Wonderful Days</div>
+            <span class="mix-action">Play on SoundCloud -></span>
+          </a>
+          <a class="mix-card label" href="https://soundcloud.com/vertigo-records" target="_blank" rel="noopener">
+            <div class="mix-artist">Vertigo Records</div>
+            <div class="mix-title">The full label on SoundCloud</div>
+            <span class="mix-action">Open SoundCloud -></span>
           </a>
         </div>
       </div>
