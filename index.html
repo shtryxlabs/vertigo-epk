@@ -3,127 +3,249 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vertigo Records — Booking</title>
-<meta name="description" content="Vertigo Records — Berlin psychedelic & techno label, est. 2006. Booking for SEDDLER, klePSYdra & Nowhereman. Three worlds, one vortex.">
+<title>Vertigo Records — Berlin Psychedelic Label</title>
+<meta name="description" content="Vertigo Records — Berlin psychedelic / psytrance label, est. 2006. Releases, roster, flagship artists, support, and booking.">
 <link rel="icon" href="img/vertigo_logo.png">
 <meta name="theme-color" content="#06040E">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Vertigo Records">
-<meta property="og:title" content="Vertigo Records — Artist Booking 2026">
-<meta property="og:description" content="Berlin psychedelic & techno label, est. 2006. Booking for SEDDLER, klePSYdra & Nowhereman.">
-<meta property="og:url" content="https://shtryxlabs.github.io/vertigo-epk/">
-<meta property="og:image" content="https://shtryxlabs.github.io/vertigo-epk/img/og/vertigo_og.png">
-<meta property="og:image:width" content="2400">
-<meta property="og:image:height" content="1260">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vertigo Records — Artist Booking 2026">
-<meta name="twitter:description" content="Berlin psychedelic & techno label, est. 2006. Booking for SEDDLER, klePSYdra & Nowhereman.">
-<meta name="twitter:image" content="https://shtryxlabs.github.io/vertigo-epk/img/og/vertigo_og.png">
 <link rel="stylesheet" href="fonts.css">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#06040E;color:#E9E6F4;font-family:'Manrope',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
-  .page{max-width:840px;margin:0 auto;padding:72px 28px 90px;text-align:center}
-  .eyebrow{font-family:'Space Mono',monospace;letter-spacing:.28em;text-transform:uppercase;font-size:11px;color:#7a7299}
-  .logo{max-width:300px;width:64%;display:block;margin:26px auto 22px;mix-blend-mode:screen}
-  .sub{color:#9a92c0;font-size:15px;font-weight:300;letter-spacing:.01em}
-
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:54px 0 30px}
-  @media(max-width:640px){.cards{grid-template-columns:1fr}}
-  a.card{display:flex;flex-direction:column;align-items:center;justify-content:space-between;min-height:188px;text-decoration:none;color:inherit;
-    border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:30px 18px;background:rgba(255,255,255,.018);transition:.25s}
-  a.card:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.16);transform:translateY(-2px)}
-  .nm{height:42px;display:flex;align-items:center;justify-content:center}
-  .nm.seddler{font-family:'Anton',sans-serif;font-size:27px;letter-spacing:.01em;color:#fff}
-  .nm.klep{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff}
-  .nm.klep b{color:#FF8A5B;font-weight:800}
-  .nm.now{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;letter-spacing:.07em;color:#E7D4A2}
-  .desc{color:#8c84b0;font-size:13px;margin-top:12px;font-weight:300}
-  .view{margin-top:auto;padding-top:16px;font-size:12px;letter-spacing:.04em;color:#a99cf0}
-  a.card:hover .view{color:#fff}
-
-  .tagline{color:#6f679a;font-size:13.5px;letter-spacing:.04em;margin-top:6px}
-  .rule{height:1px;background:rgba(255,255,255,.07);max-width:120px;margin:58px auto 34px}
-  .roster-lbl{font-family:'Space Mono',monospace;letter-spacing:.2em;text-transform:uppercase;font-size:10.5px;color:#6a6294;margin-bottom:18px}
-  .pills{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;max-width:660px;margin:0 auto}
-  a.pill{font-size:12.5px;letter-spacing:.02em;text-decoration:none;color:#b9b1dc;border:1px solid rgba(255,255,255,.09);border-radius:30px;padding:8px 15px;transition:.2s}
-  a.pill:hover{border-color:#A24BFF;color:#fff}
-  .foot{margin-top:50px;font-size:13px;color:#8c84b0}
-  .foot a{color:#cfc7f0;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18)}
-  .foot a:hover{color:#FF7BD0;border-color:#FF7BD0}
-
-  /* ---- premium layer ---- */
-  html{scroll-behavior:smooth}
-  ::selection{background:#A24BFF;color:#fff}
-  body::after{content:"";position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
-  .page{position:relative}
-  .page::before{content:"";position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:620px;max-width:120%;height:520px;z-index:-1;pointer-events:none;
-    background:radial-gradient(closest-side,rgba(162,75,255,.20),rgba(255,123,208,.07) 55%,transparent 75%);
-    filter:blur(8px);animation:aura 9s ease-in-out infinite alternate}
-  @keyframes aura{from{opacity:.7;transform:translateX(-50%) scale(.96)}to{opacity:1;transform:translateX(-50%) scale(1.06)}}
-  @keyframes floatup{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
-  .eyebrow,.logo,.sub,.cards a.card,.tagline,.pills{opacity:0;animation:floatup .8s cubic-bezier(.2,.7,.2,1) forwards}
-  .eyebrow{animation-delay:.05s}.logo{animation-delay:.14s}.sub{animation-delay:.24s}
-  .cards a.card:nth-child(1){animation-delay:.34s}.cards a.card:nth-child(2){animation-delay:.44s}.cards a.card:nth-child(3){animation-delay:.54s}
-  .tagline{animation-delay:.64s}.pills{animation-delay:.74s}
-  a.card,a.pill,.foot a{outline-offset:3px}
-  a.card:focus-visible{outline:2px solid #A24BFF}a.pill:focus-visible,.foot a:focus-visible{outline:2px solid #FF7BD0}
-  @media(prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto}
-    .page::before{animation:none}
-    .eyebrow,.logo,.sub,.cards a.card,.tagline,.pills{opacity:1;animation:none}
+  :root{
+    --void:#06040E; --panel:#0B0717; --line:#201A34; --mist:#EDEAF6; --muted:#9A92C0;
+    --cyan:#22D6FF; --magenta:#FF4BC4; --violet:#A24BFF; --gold:#D8A542;
   }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--void);color:var(--mist);font-family:'Manrope',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  .mono{font-family:'Space Mono',monospace;letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:var(--muted)}
+  .nav{position:sticky;top:0;z-index:20;background:rgba(6,4,14,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav .wrap{height:58px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+  .nav-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.12em;font-size:13px;color:#fff}
+  .nav-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+  .nav-links a{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#aaa1d0;border:0}
+  .nav-links a:hover{color:#fff}
+
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.07)}
+  .hero::before{content:"";position:absolute;inset:-20%;background:
+    radial-gradient(800px 520px at 50% 42%,rgba(162,75,255,.35),transparent 68%),
+    radial-gradient(560px 420px at 42% 48%,rgba(255,75,196,.28),transparent 64%),
+    radial-gradient(560px 420px at 58% 48%,rgba(34,214,255,.24),transparent 64%),
+    radial-gradient(900px 520px at 50% 90%,rgba(216,165,66,.10),transparent 70%);
+    opacity:.95}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--void),rgba(6,4,14,.34) 54%,rgba(6,4,14,.78))}
+  .hero-in{position:relative;z-index:2;padding:86px 0 70px;text-align:center}
+  .logo{display:block;width:min(420px,78vw);height:auto;margin:0 auto 22px;mix-blend-mode:screen}
+  h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(42px,8vw,92px);line-height:.96;letter-spacing:.02em;color:#fff}
+  .lead{max-width:760px;margin:20px auto 0;color:#c9c2e5;font-size:clamp(17px,2.2vw,22px)}
+  .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:13px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-family:'Space Grotesk',sans-serif;font-weight:700;color:#fff;background:rgba(255,255,255,.04)}
+  .btn.primary{background:linear-gradient(90deg,var(--magenta),var(--cyan));color:#05050A;border:0}
+  .btn:hover{border-color:rgba(255,255,255,.32);transform:translateY(-1px)}
+
+  section{padding:72px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+  .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}
+  h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4.4vw,48px);line-height:1.05;color:#fff}
+  .section-copy{max-width:620px;color:#aaa1d0;font-size:16px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}.section-head{display:block}.section-copy{margin-top:12px}.nav-links{display:none}}
+  .card{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:24px;min-height:180px;transition:.2s}
+  .card:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);transform:translateY(-2px)}
+  .card h3{font-family:'Space Grotesk',sans-serif;font-size:24px;color:#fff;margin-top:10px}
+  .card p{color:#aaa1d0;font-size:14.5px;margin-top:10px}
+  .card .link{display:inline-block;margin-top:18px;color:#fff;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  .listen-row{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+  @media(max-width:820px){.listen-row{grid-template-columns:1fr}}
+  .release{min-height:280px;background:
+    radial-gradient(460px 240px at 50% 20%,rgba(255,75,196,.18),transparent),
+    radial-gradient(420px 220px at 50% 60%,rgba(34,214,255,.14),transparent),
+    rgba(255,255,255,.035)}
+  .platforms{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  .platforms a{padding:14px 16px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(255,255,255,.03);color:#d9d2f4}
+  .platforms a:hover{border-color:var(--cyan);color:#fff}
+  .artist-card.seddler h3{color:#fff}
+  .artist-card.seddler .mono{color:#D10F1F}
+  .artist-card.klep .mono{color:#F6B73C}
+  .artist-card.now .mono{color:#D8A542}
+  .artist-logo{display:block;height:34px;width:auto;max-width:82%;object-fit:contain;margin-top:10px;mix-blend-mode:screen}
+  .roster{display:flex;flex-wrap:wrap;gap:9px}
+  .pill{font-size:12.5px;color:#c6bfdf;border:1px solid rgba(255,255,255,.10);border-radius:999px;padding:8px 14px;background:rgba(255,255,255,.025)}
+  .support{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media(max-width:820px){.support{grid-template-columns:1fr}}
+  footer{padding:54px 0 72px;text-align:center;color:#8d85b4}
+  footer a{border-bottom:1px solid rgba(255,255,255,.16)}
+  footer a:hover{color:#fff;border-color:#fff}
+  .legal{margin-top:14px;font-size:12px}
 </style>
 </head>
 <body>
-<div class="page">
+  <nav class="nav">
+    <div class="wrap">
+      <a class="nav-brand" href="#top">VERTIGO RECORDS</a>
+      <div class="nav-links">
+        <a href="#listen">Listen</a>
+        <a href="#artists">Artists</a>
+        <a href="#roster">Roster</a>
+        <a href="#support">Support</a>
+        <a href="#booking">Booking</a>
+      </div>
+    </div>
+  </nav>
 
-  <div class="eyebrow">Berlin · Psychedelic / Techno · Est. 2006</div>
-  <img class="logo" src="img/logos/vertigo_full_black.png" alt="Vertigo Records">
-  <div class="sub">Artist booking · 2026</div>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-in">
+        <img class="logo" src="img/logos/vertigo_full_black.png" alt="Vertigo Records">
+        <div class="mono">Berlin · Psychedelic / Psytrance · Est. 2006</div>
+        <h1>Three Worlds.<br>One Vortex.</h1>
+        <p class="lead">Vertigo Records is the Berlin psychedelic label behind a 20-year catalog, flagship artist projects, and a living roster of deep, energetic electronic music.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://vertigorecords.bandcamp.com/">Listen / Buy on Bandcamp</a>
+          <a class="btn" href="#booking">Artist Booking</a>
+        </div>
+      </div>
+    </section>
 
-  <div class="cards">
-    <a class="card" href="seddler.html">
-      <div class="nm seddler">SEDDLER</div>
-      <div class="desc">Hybrid live · Techno</div>
-      <div class="view">View EPK →</div>
-    </a>
-    <a class="card" href="klepsydra.html">
-      <div class="nm klep">kle<b>PSY</b>dra</div>
-      <div class="desc">Psytrance · Sunrise</div>
-      <div class="view">View EPK →</div>
-    </a>
-    <a class="card" href="nowhereman.html">
-      <div class="nm now">NOWHEREMAN</div>
-      <div class="desc">Goa · Deep cosmic</div>
-      <div class="view">View EPK →</div>
-    </a>
-  </div>
+    <section id="listen">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="mono">Music first</div>
+            <h2>Listen, buy, support.</h2>
+          </div>
+          <p class="section-copy">Bandcamp is the direct home for the label catalog. Streaming is for discovery; direct support keeps the label moving.</p>
+        </div>
+        <div class="listen-row">
+          <a class="card release" href="https://vertigorecords.bandcamp.com/">
+            <div class="mono">Catalog</div>
+            <h3>Vertigo Records on Bandcamp</h3>
+            <p>Releases, compilations, archive gems, and direct support for the label.</p>
+            <span class="link">Open Bandcamp -></span>
+          </a>
+          <div class="card">
+            <div class="mono">Platforms</div>
+            <div class="platforms" style="margin-top:18px">
+              <a href="https://soundcloud.com/vertigo-records">SoundCloud</a>
+              <a href="https://vertigorecords.bandcamp.com/">Bandcamp</a>
+              <a href="https://www.instagram.com/vertigo.records/">Instagram</a>
+              <a href="https://www.facebook.com/VertigoRec">Facebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="tagline">Three worlds. One vortex.</div>
+    <section id="artists">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="mono">Flagship artists</div>
+            <h2>Booking-ready worlds.</h2>
+          </div>
+          <p class="section-copy">SEDDLER and klePSYdra are the active priority projects. Nowhereman adds the founder / deep cosmic goa layer to the Vertigo story.</p>
+        </div>
+        <div class="grid">
+          <a class="card artist-card seddler" href="seddler.html">
+            <div class="mono">Hybrid live · Techno</div>
+            <h3><img class="artist-logo" src="img/logos/seddler_negative_white_on_black.png" alt="SEDDLER"></h3>
+            <p>Industrial pressure, analog depth, tek-trance momentum, Berlin club energy.</p>
+            <span class="link">View EPK -></span>
+          </a>
+          <a class="card artist-card klep" href="klepsydra.html">
+            <div class="mono">Psychedelic psytrance</div>
+            <h3><img class="artist-logo" src="img/logos/klepsydra_negative_white_on_black.png" alt="klePSYdra"></h3>
+            <p>Full-power main-time psychedelic — plus a funky morning psy-prog option.</p>
+            <span class="link">View EPK -></span>
+          </a>
+          <a class="card artist-card now" href="nowhereman.html">
+            <div class="mono">Goa · Melodic techno</div>
+            <h3><img class="artist-logo" src="img/logos/nowhereman_wordmark.svg" alt="Nowhereman"></h3>
+            <p>Timeless goa journeys — and melodic / progressive techno DJ sets.</p>
+            <span class="link">View EPK -></span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <div class="rule"></div>
+    <section id="roster">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="mono">On the label</div>
+            <h2>20 years of psychedelic music.</h2>
+          </div>
+          <p class="section-copy">Roster and catalog names are presented as label history and release credibility, not as a full booking agency claim.</p>
+        </div>
+        <div class="roster">
+          <a class="pill" href="https://vertigorecords.bandcamp.com/">Psykovsky</a>
+          <a class="pill" href="https://vertigorecords.bandcamp.com/">OOOD</a>
+          <a class="pill" href="https://vertigorecords.bandcamp.com/">Goa Gil · The Nommos</a>
+          <a class="pill" href="https://vertigorecords.bandcamp.com/">Man With No Name</a>
+          <a class="pill" href="https://vertigorecords.bandcamp.com/">Eat Static</a>
+          <a class="pill" href="https://vertigorecords.bandcamp.com/">Ocelot</a>
+          <a class="pill" href="https://overdream.bandcamp.com/">Overdream</a>
+          <a class="pill" href="https://interconnekted.bandcamp.com/">Interconnekted</a>
+          <a class="pill" href="https://terrafractyl.bandcamp.com/">Terrafractyl</a>
+          <a class="pill" href="https://vertigorecords.bandcamp.com/">Yudhisthira</a>
+        </div>
+      </div>
+    </section>
 
-  <div class="roster-lbl">On the label · 20 years of psychedelic music</div>
-  <div class="pills">
-    <a class="pill" href="https://vertigorecords.bandcamp.com/">Psykovsky</a>
-    <a class="pill" href="https://vertigorecords.bandcamp.com/">OOOD</a>
-    <a class="pill" href="https://vertigorecords.bandcamp.com/">Goa Gil · The Nommos</a>
-    <a class="pill" href="https://vertigorecords.bandcamp.com/">Man With No Name</a>
-    <a class="pill" href="https://vertigorecords.bandcamp.com/">Eat Static</a>
-    <a class="pill" href="https://vertigorecords.bandcamp.com/">Ocelot</a>
-    <a class="pill" href="https://overdream.bandcamp.com/">Overdream</a>
-    <a class="pill" href="https://interconnekted.bandcamp.com/">Interconnekted</a>
-    <a class="pill" href="https://terrafractyl.bandcamp.com/">Terrafractyl</a>
-    <a class="pill" href="https://vertigorecords.bandcamp.com/">Yudhisthira</a>
-  </div>
+    <section id="support">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="mono">Direct support</div>
+            <h2>Buy music. Wear the vortex.</h2>
+          </div>
+          <p class="section-copy">Direct sales, Bandcamp support, and merch fund the label more meaningfully than passive streaming.</p>
+        </div>
+        <div class="support">
+          <a class="card" href="https://vertigorecords.bandcamp.com/">
+            <div class="mono">Music</div>
+            <h3>Bandcamp-first catalog</h3>
+            <p>Buy releases directly and support the label without platform fog.</p>
+            <span class="link">Open Bandcamp -></span>
+          </a>
+          <a class="card" href="mailto:info.vertigorecords@gmail.com">
+            <div class="mono">Sponsors / merch</div>
+            <h3>Support and partnerships</h3>
+            <p>Merch, label support, sponsor ideas, and collaboration inquiries.</p>
+            <span class="link">Contact -></span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <div class="foot">
-    Booking — <a href="mailto:info.vertigorecords@gmail.com">info.vertigorecords@gmail.com</a> &nbsp;·&nbsp; <a href="https://vertigorecords.bandcamp.com/">Bandcamp</a>
-    <div style="margin-top:14px;font-size:12px"><a href="impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html">Datenschutz</a></div>
-  </div>
+    <section id="booking">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="mono">Booking</div>
+            <h2>Vertigo Records presents.</h2>
+          </div>
+          <p class="section-copy">Booking focus: SEDDLER, klePSYdra, and selected Vertigo flagship presentations. Fee and routing on request.</p>
+        </div>
+        <div class="actions" style="justify-content:flex-start;margin-top:0">
+          <a class="btn primary" href="mailto:info.vertigorecords@gmail.com">info.vertigorecords@gmail.com</a>
+          <a class="btn" href="seddler.html">SEDDLER EPK</a>
+          <a class="btn" href="klepsydra.html">klePSYdra EPK</a>
+          <a class="btn" href="nowhereman.html">Nowhereman EPK</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</div>
+  <footer>
+    <div class="wrap">
+      <div class="mono">Vertigo Records · Berlin</div>
+      <div style="margin-top:12px">
+        <a href="mailto:info.vertigorecords@gmail.com">info.vertigorecords@gmail.com</a> ·
+        <a href="https://vertigorecords.bandcamp.com/">Bandcamp</a> ·
+        <a href="https://www.instagram.com/vertigo.records/">Instagram</a>
+      </div>
+      <div class="legal"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div>
+    </div>
+  </footer>
 </body>
 </html>
