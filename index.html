@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Syne:wght@700;800&family=Space+Mono&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#070510;color:#EDEAF6;font-family:'Manrope',sans-serif;font-weight:300;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 20px;text-align:center}
+  body{background:#070510;color:#EDEAF6;font-family:'Manrope',sans-serif;font-weight:300;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 20px;text-align:center}
   .mono{font-family:'Space Mono',monospace;letter-spacing:.22em;text-transform:uppercase;font-size:12px;color:#8a82b8}
   .brand{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(40px,9vw,88px);line-height:1;background:linear-gradient(90deg,#22D6FF,#A24BFF,#FF4BC4);-webkit-background-clip:text;background-clip:text;color:transparent;margin:16px 0 6px}
   .sub{color:#b7afe0;font-size:16px;margin-bottom:46px}
@@ -21,13 +21,18 @@
   a.card .desc{color:#9c93c8;font-size:14px;margin-top:8px}
   a.card .go{display:inline-block;margin-top:18px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#22D6FF}
   .double{max-width:760px;margin:18px auto 0;color:#8a82b8;font-size:14px}
+  .roster{max-width:760px;width:100%;margin:48px auto 0;border-top:1px solid #1a1430;padding-top:30px}
+  .roster .lbl{margin-bottom:16px}
+  .rost-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  a.rost{font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.08em;text-decoration:none;color:#cfc7f0;border:1px solid #2a2148;border-radius:30px;padding:9px 18px;transition:.2s}
+  a.rost:hover{border-color:#FF4BC4;color:#fff}
   .foot{margin-top:46px}
   .foot a{color:#EDEAF6;text-decoration:none;border-bottom:1px solid #3a2f5e}
   .foot a:hover{color:#FF4BC4;border-color:#FF4BC4}
 </style>
 </head>
 <body>
-  <div class="mono">Berlin · Psychedelic / Techno</div>
+  <div class="mono">Berlin · Psychedelic / Techno · Est. 2006</div>
   <div class="brand">VERTIGO RECORDS</div>
   <div class="sub">Artist booking · 2026</div>
 
@@ -46,8 +51,20 @@
 
   <div class="double mono">Double Impact — both artists, one travel cost, for multi-stage festivals</div>
 
+  <div class="roster">
+    <div class="lbl mono">On the label · 20 years of psychedelic music</div>
+    <div class="rost-row">
+      <a class="rost" href="https://overdream.bandcamp.com/">Overdream</a>
+      <a class="rost" href="https://interconnekted.bandcamp.com/">Interconnekted</a>
+      <a class="rost" href="https://vertigorecords.bandcamp.com/">Mesopotamus</a>
+      <a class="rost" href="https://vertigorecords.bandcamp.com/">Hazedaze</a>
+      <a class="rost" href="https://vertigorecords.bandcamp.com/">Vertigo XXth · VA</a>
+    </div>
+  </div>
+
   <div class="foot mono">
     Booking: <a href="mailto:info.vertigorecords@gmail.com">info.vertigorecords@gmail.com</a>
+    &nbsp;·&nbsp; <a href="https://vertigorecords.bandcamp.com/">Bandcamp</a>
   </div>
 </body>
 </html>
