@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOWHEREMAN — EPK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#06070D; --indigo:#182046; --violet:#54358C; --magenta:#B33CCF;
+    --gold:#D8A542; --nebula:#4E79F7; --mist:#C8BDE6; --sand:#E7D4A2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:#EAE6F5;font-family:'Manrope',sans-serif;font-weight:300;line-height:1.65}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  .grotesk{font-family:'Space Grotesk',sans-serif}
+  .mono{font-family:'Space Mono',monospace;letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:#8e84c4}
+  .gold{color:var(--gold)}
+  a{color:#EAE6F5;text-decoration:none;border-bottom:1px solid #2a2150;transition:.2s}
+  a:hover{color:var(--gold);border-color:var(--gold)}
+  section{padding:64px 0;border-bottom:1px solid #15122e}
+  hr.orbit{height:1px;border:0;background:linear-gradient(90deg,transparent,var(--gold),var(--magenta),transparent);margin:0}
+
+  .hero{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;
+    background:
+      radial-gradient(1px 1px at 20% 30%,#fff7 0,transparent 60%),
+      radial-gradient(1px 1px at 70% 20%,#fff5 0,transparent 60%),
+      radial-gradient(1px 1px at 40% 70%,#fff6 0,transparent 60%),
+      radial-gradient(1px 1px at 85% 60%,#fff4 0,transparent 60%),
+      radial-gradient(1200px 700px at 50% 38%,rgba(179,60,207,.32),transparent 60%),
+      radial-gradient(900px 600px at 50% 40%,rgba(84,53,140,.45),transparent 65%),
+      radial-gradient(400px 300px at 50% 39%,rgba(216,165,66,.28),transparent 70%),
+      var(--bg)}
+  .hero-in{position:relative;z-index:2;padding:40px 0}
+  .hero h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(40px,10vw,104px);letter-spacing:.16em;color:#fff;text-shadow:0 0 40px rgba(216,165,66,.25)}
+  .hero .tag{margin-top:14px;font-size:clamp(13px,2.2vw,16px)}
+  .meta{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+
+  h2.sec{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(26px,5vw,44px);margin-bottom:22px;letter-spacing:.02em}
+  h2.sec em{color:var(--gold);font-style:normal}
+  p.lead{font-size:18px;color:#c3bbe0;max-width:70ch}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:26px}
+  .card{background:#0c0a1e;border:1px solid #1c1740;padding:22px;border-radius:14px}
+  .card .big{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;margin-top:6px}
+  .listen a{display:flex;justify-content:space-between;align-items:center;padding:16px 4px;border:0;border-bottom:1px solid #15122e;font-size:17px}
+  .listen a:hover{padding-left:10px}
+  .photo-slot{border-radius:14px;overflow:hidden;height:250px;border:1px solid #1c1740;background:radial-gradient(600px 300px at 50% 40%,rgba(84,53,140,.4),#0a0820)}
+  .photo-slot img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo-slot .ph{height:100%;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;color:#3a3270;font-size:12px;letter-spacing:.2em}
+  .cta{display:inline-block;margin-top:8px;background:var(--gold);color:#2a1c02;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;padding:15px 34px;border-radius:40px;border:0;letter-spacing:.03em}
+  .cta:hover{background:#fff}
+  footer{padding:54px 0 80px;text-align:center}
+  footer .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:.18em}
+  .socials{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:16px;font-size:14px}
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-in wrap">
+      <div class="mono gold">Vertigo Records · Founder</div>
+      <h1>NOWHEREMAN</h1>
+      <div class="tag mono">Deep Cosmic Goa · Psytrance</div>
+      <div class="meta mono"><span>Available for 2026</span><span>Festivals · Parties · Sunrise</span></div>
+    </div>
+  </div>
+
+  <section><div class="wrap">
+    <h2 class="sec">The <em>explorer</em></h2>
+    <p class="lead">Nowhereman is a founding member of Vertigo Records and one of the original psychoactive explorers of the Berlin goa/psytrance scene. Deep, timeless goa trance shaped into a hypnotic cosmic journey — the signature Vertigo sound: music that makes you fly without moving.</p>
+    <div class="grid">
+      <div class="card"><div class="mono gold">Sound</div><div class="big">Deep · Cosmic · Hypnotic Goa</div></div>
+      <div class="card"><div class="mono gold">Role</div><div class="big">Vertigo Records — Founder</div></div>
+      <div class="card"><div class="mono gold">Best for</div><div class="big">Goa floors · Sunrise · Journeys</div></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap listen">
+    <h2 class="sec"><em>Listen</em></h2>
+    <a href="https://soundcloud.com/djnowhereman"><span>Nowhereman on SoundCloud</span><span class="mono">Soundcloud →</span></a>
+    <a href="https://soundcloud.com/vertigo-records/delirious-noon-nowhereman"><span>Delirious Noon &amp; Nowhereman — Wonderful Days</span><span class="mono">Soundcloud →</span></a>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2 class="sec">On <em>stage</em></h2>
+    <div class="grid">
+      <div class="photo-slot"><div class="ph">[ DJ SUNSET ]</div></div>
+      <div class="photo-slot"><div class="ph">[ LIVE ]</div></div>
+      <div class="photo-slot"><div class="ph">[ PORTRAIT ]</div></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2 class="sec">Tech <em>rider</em></h2>
+    <p class="lead">Standard DJ booth — 2× CDJs + mixer. Full technical and hospitality rider on request. Travels internationally.</p>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2 class="sec">Book <em>Nowhereman</em></h2>
+    <p class="lead">Booking via Vertigo Records. Fee on request — based on date, region and travel. Part of the Vertigo flagship trio with SEDDLER and klePSYdra.</p>
+    <a class="cta" href="mailto:info.vertigorecords@gmail.com">info.vertigorecords@gmail.com</a>
+  </div></section>
+
+  <hr class="orbit">
+  <footer><div class="wrap">
+    <div class="logo">NOWHEREMAN</div>
+    <div class="socials mono">
+      <a href="https://soundcloud.com/djnowhereman">soundcloud.com/djnowhereman</a>
+      <a href="https://www.instagram.com/sergeiomsky/">instagram.com/sergeiomsky</a>
+      <a href="https://www.facebook.com/Mr.Nowhereman">facebook.com/Mr.Nowhereman</a>
+    </div>
+    <div class="mono" style="margin-top:20px;color:#3a3270">Vertigo Records · Berlin · Three worlds. One vortex.</div>
+  </div></footer>
+
+</body>
+</html>
