@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
   <title id="title">Nowhereman monogram</title>
   <desc id="desc">N/M cosmic monogram for Nowhereman.</desc>
-  <rect width="1024" height="1024" fill="#06070D"/>
   <defs>
     <radialGradient id="halo" cx="50%" cy="45%" r="58%">
       <stop offset="0%" stop-color="#D8A542" stop-opacity="0.38"/>
@@ -9,7 +8,6 @@
       <stop offset="100%" stop-color="#06070D" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="1024" height="1024" fill="url(#halo)"/>
   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="512" cy="512" r="306" stroke="#D8A542" stroke-width="10"/>
     <circle cx="512" cy="512" r="224" stroke="#54358C" stroke-width="4"/>
