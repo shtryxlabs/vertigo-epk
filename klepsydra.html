@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>klePSYdra — EPK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#1a1208; --cream:#FFF8EA; --sand:#F2D6A2; --gold:#F6B73C;
+    --coral:#FF6B5F; --pink:#F45BC4; --violet:#7B3FF2; --aqua:#22D6C7; --ink:#2a1d0c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--cream);color:var(--ink);font-family:'Manrope',sans-serif;font-weight:300;line-height:1.65}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  .syne{font-family:'Syne',sans-serif}
+  .mono{font-family:'Space Mono',monospace;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:#9a7f4e}
+  a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--sand);transition:.2s}
+  a:hover{color:var(--coral);border-color:var(--coral)}
+  .grad{background:linear-gradient(90deg,var(--gold),var(--coral),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+  section{padding:64px 0;border-bottom:1px solid #efe2c8}
+  hr.wave{height:3px;border:0;background:linear-gradient(90deg,transparent,var(--gold),var(--coral),var(--pink),transparent);margin:0}
+
+  .hero{position:relative;min-height:74vh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-photo{position:absolute;inset:0;background:linear-gradient(to top,rgba(255,248,234,.92),rgba(255,248,234,.15) 55%,rgba(255,248,234,.30)),url("img/klepsydra/epk_hero.png");background-size:cover;background-position:center}
+  .hero-in{position:relative;z-index:2;padding:46px 0}
+  .hero h1{font-size:clamp(56px,12vw,128px);font-weight:800;line-height:.95;letter-spacing:-.01em}
+  .hero h1 .psy{font-weight:800}
+  .hero .tag{margin-top:10px;font-size:clamp(13px,2.2vw,17px)}
+  .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:18px}
+
+  h2.sec{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(28px,5vw,46px);margin-bottom:22px}
+  p.lead{font-size:18px;color:#5a4a2e;max-width:70ch}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:26px}
+  .card{background:#fffdf6;border:1px solid #efe2c8;padding:22px;border-radius:14px}
+  .card .big{font-family:'Syne',sans-serif;font-weight:700;font-size:20px;line-height:1.15;margin-top:6px}
+  .listen a{display:flex;justify-content:space-between;align-items:center;padding:16px 4px;border:0;border-bottom:1px solid #efe2c8;font-size:17px}
+  .listen a:hover{padding-left:10px}
+  .photo-slot{border-radius:14px;overflow:hidden;height:260px;border:1px solid #efe2c8}
+  .photo-slot img{width:100%;height:100%;object-fit:cover;display:block}
+  .cta{display:inline-block;margin-top:8px;background:linear-gradient(90deg,var(--gold),var(--coral));color:#3a1500;font-family:'Syne',sans-serif;font-weight:700;font-size:18px;padding:16px 34px;border-radius:40px;border:0}
+  .cta:hover{filter:brightness(1.06)}
+  footer{padding:54px 0 80px;text-align:center}
+  footer .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:32px}
+  .socials{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:16px;font-size:14px}
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-photo"></div>
+    <div class="wrap hero-in">
+      <div class="mono">Berlin · Vertigo Records</div>
+      <h1 class="syne">kle<span class="psy grad">PSY</span>dra</h1>
+      <div class="tag mono">Psytrance · Peak-time · Sunrise</div>
+      <div class="meta mono"><span>Available for 2026</span><span>Festivals · Main-stage · Morning</span></div>
+    </div>
+  </div>
+
+  <section><div class="wrap">
+    <h2 class="sec">The <span class="grad">project</span></h2>
+    <p class="lead">klePSYdra is the psytrance project of Denys (Vertigo Records, Berlin). Light, driving, peak-time and morning psytrance — pure, uplifting energy built for main stages and sunrise floors. No dark, no forest: just bright, hypnotic flow.</p>
+    <div class="grid">
+      <div class="card"><div class="mono">Sound</div><div class="big">Light · Driving · Peak-time</div></div>
+      <div class="card"><div class="mono">Best for</div><div class="big">Main stage · Sunrise · Morning</div></div>
+      <div class="card"><div class="mono">Label</div><div class="big">Vertigo Records</div></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap listen">
+    <h2 class="sec"><span class="grad">Listen</span></h2>
+    <a href="https://soundcloud.com/klepsydramusic/winter-solstice-light-radiozora-exclusive-guest-mix"><span>Radiozora — Winter Solstice Light (Exclusive Mix)</span><span class="mono">Soundcloud →</span></a>
+    <a href="https://soundcloud.com/klepsydramusic"><span>klePSYdra on SoundCloud</span><span class="mono">Soundcloud →</span></a>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2 class="sec">On <span class="grad">stage</span></h2>
+    <div class="grid">
+      <div class="photo-slot"><img src="img/klepsydra/epk_crowd.png" alt="klePSYdra festival sunrise"></div>
+      <div class="photo-slot"><img src="img/klepsydra/epk_deck.png" alt="klePSYdra live"></div>
+      <div class="photo-slot"><img src="img/klepsydra/epk_portrait.png" alt="klePSYdra"></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2 class="sec">Tech <span class="grad">rider</span></h2>
+    <p class="lead">Standard psytrance booth — 2× CDJs + mixer, or controller setup. Full technical and hospitality rider on request. Berlin-based, travels across the EU.</p>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2 class="sec">Book <span class="grad">klePSYdra</span></h2>
+    <p class="lead">Booking via Vertigo Records. Fee on request — based on date, region and travel. Double Impact package available with SEDDLER (techno) for multi-stage festivals.</p>
+    <a class="cta" href="mailto:info.vertigorecords@gmail.com">info.vertigorecords@gmail.com</a>
+  </div></section>
+
+  <hr class="wave">
+  <footer><div class="wrap">
+    <div class="logo syne">kle<span class="grad">PSY</span>dra</div>
+    <div class="socials mono">
+      <a href="https://soundcloud.com/klepsydramusic">soundcloud.com/klepsydramusic</a>
+      <a href="https://www.instagram.com/klepsydra.psytrance/">instagram.com/klepsydra.psytrance</a>
+      <a href="https://vertigorecords.bandcamp.com">vertigorecords.bandcamp.com</a>
+    </div>
+    <div class="mono" style="margin-top:20px;color:#c4ad7e">Vertigo Records · Berlin</div>
+  </div></footer>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertigo Records — Booking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Syne:wght@700;800&family=Space+Mono&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#070510;color:#EDEAF6;font-family:'Manrope',sans-serif;font-weight:300;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 20px;text-align:center}
+  .mono{font-family:'Space Mono',monospace;letter-spacing:.22em;text-transform:uppercase;font-size:12px;color:#8a82b8}
+  .brand{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(40px,9vw,88px);line-height:1;background:linear-gradient(90deg,#22D6FF,#A24BFF,#FF4BC4);-webkit-background-clip:text;background-clip:text;color:transparent;margin:16px 0 6px}
+  .sub{color:#b7afe0;font-size:16px;margin-bottom:46px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:760px;width:100%}
+  a.card{display:block;text-decoration:none;color:inherit;border:1px solid #221a3a;border-radius:16px;padding:34px 26px;background:#0d0a1c;transition:.2s}
+  a.card:hover{border-color:#A24BFF;transform:translateY(-3px)}
+  a.card .name{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:30px;letter-spacing:.01em}
+  a.card .syne{font-family:'Syne',sans-serif;font-weight:800;text-transform:none}
+  a.card .desc{color:#9c93c8;font-size:14px;margin-top:8px}
+  a.card .go{display:inline-block;margin-top:18px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#22D6FF}
+  .double{max-width:760px;margin:18px auto 0;color:#8a82b8;font-size:14px}
+  .foot{margin-top:46px}
+  .foot a{color:#EDEAF6;text-decoration:none;border-bottom:1px solid #3a2f5e}
+  .foot a:hover{color:#FF4BC4;border-color:#FF4BC4}
+</style>
+</head>
+<body>
+  <div class="mono">Berlin · Psychedelic / Techno</div>
+  <div class="brand">VERTIGO RECORDS</div>
+  <div class="sub">Artist booking · 2026</div>
+
+  <div class="cards">
+    <a class="card" href="seddler.html">
+      <div class="name">SEDDLER</div>
+      <div class="desc">Hybrid live · Techno · Tek-trance</div>
+      <div class="go">View EPK →</div>
+    </a>
+    <a class="card" href="klepsydra.html">
+      <div class="name syne">kle<span style="color:#FF8A5B">PSY</span>dra</div>
+      <div class="desc">Psytrance · Peak-time · Sunrise</div>
+      <div class="go">View EPK →</div>
+    </a>
+  </div>
+
+  <div class="double mono">Double Impact — both artists, one travel cost, for multi-stage festivals</div>
+
+  <div class="foot mono">
+    Booking: <a href="mailto:info.vertigorecords@gmail.com">info.vertigorecords@gmail.com</a>
+  </div>
+</body>
+</html>

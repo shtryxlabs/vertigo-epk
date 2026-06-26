@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEDDLER — EPK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#050505; --graphite:#111111; --steel:#1E1E1E; --machine:#4A4A4A;
+    --dust:#B8B8B8; --white:#F2F2EC; --crimson:#D10F1F; --blood:#6F050B;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--black);color:var(--white);font-family:'Oswald',sans-serif;font-weight:300;line-height:1.6;letter-spacing:.02em}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  .display{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:.95}
+  .mono{font-family:'Space Mono',monospace;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--dust)}
+  .crimson{color:var(--crimson)}
+  a{color:var(--white);text-decoration:none;border-bottom:1px solid var(--blood);transition:.2s}
+  a:hover{color:var(--crimson);border-color:var(--crimson)}
+  .wave{height:2px;background:linear-gradient(90deg,transparent,var(--crimson),transparent);margin:0;border:0}
+  section{padding:64px 0;border-bottom:1px solid var(--steel)}
+
+  /* HERO */
+  .hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;border-bottom:1px solid var(--steel);overflow:hidden}
+  .hero-photo{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,.96),rgba(5,5,5,.40) 55%,rgba(5,5,5,.62)),url("img/seddler/epk_hero.png");background-size:cover;background-position:center;background-repeat:no-repeat}
+  .hero-beam{position:absolute;top:0;right:18%;width:2px;height:100%;background:linear-gradient(var(--crimson),transparent)}
+  .hero-in{position:relative;z-index:2;padding:48px 0}
+  .hero h1{font-size:clamp(64px,13vw,150px);color:var(--white)}
+  .hero .tag{margin-top:8px;font-size:clamp(13px,2.2vw,18px)}
+  .hero .tag b{color:var(--crimson);font-weight:500}
+  .meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:20px}
+
+  h2.sec{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(28px,5vw,48px);color:var(--white);margin-bottom:24px}
+  h2.sec em{color:var(--crimson);font-style:normal}
+  p.lead{font-size:18px;color:#d8d8d2;max-width:70ch;font-weight:300}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:28px}
+  .card{background:var(--graphite);border:1px solid var(--steel);padding:22px 22px;border-radius:2px}
+  .card .mono{margin-bottom:8px}
+  .card .big{font-family:'Anton',sans-serif;font-size:22px;text-transform:uppercase;line-height:1.1}
+  .listen a{display:flex;justify-content:space-between;align-items:center;padding:16px 4px;border-bottom:1px solid var(--steel);font-size:17px;border-top:0;border-left:0;border-right:0}
+  .listen a:hover{padding-left:10px}
+  .photo-slot{border:1px solid var(--steel);height:240px;overflow:hidden;border-radius:2px}
+  .photo-slot img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.05)}
+  .cta{display:inline-block;margin-top:8px;background:var(--crimson);color:#fff;border:0;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:18px;padding:16px 34px;border-radius:2px}
+  .cta:hover{background:#fff;color:var(--black)}
+  footer{padding:56px 0 80px;text-align:center}
+  footer .logo{font-family:'Anton',sans-serif;font-size:34px;text-transform:uppercase;letter-spacing:.02em}
+  .socials{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:18px;font-size:15px}
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-photo"></div>
+    <div class="hero-beam"></div>
+    <div class="wrap hero-in">
+      <div class="mono crimson">Berlin · Vertigo Records</div>
+      <h1 class="display">SEDDLER</h1>
+      <div class="tag mono">Hybrid Live &nbsp;·&nbsp; <b>Techno</b> &nbsp;·&nbsp; Tek-Trance</div>
+      <div class="meta mono">
+        <span>Available for 2026 bookings</span>
+        <span>Travels EU</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section><div class="wrap">
+    <h2 class="sec">The <em>artist</em></h2>
+    <p class="lead">Denys — Berlin-based DJ, producer and sound engineer, owner of Vertigo Records. SEDDLER is a hybrid DJ project: driving, hypnotic techno and tek-trance performed live from a controller and Maschine groovebox, routed through a hi-end DAC and analog signal path for maximum pressure and clarity on the floor.</p>
+    <div class="grid">
+      <div class="card"><div class="mono crimson">Sound</div><div class="big">Hypnotic · Driving · Analog</div></div>
+      <div class="card"><div class="mono crimson">Format</div><div class="big">Hybrid Live DJ Set</div></div>
+      <div class="card"><div class="mono crimson">Best for</div><div class="big">Techno clubs · Alt stages · Sunrise</div></div>
+    </div>
+  </div></section>
+
+  <!-- LISTEN -->
+  <section><div class="wrap listen">
+    <h2 class="sec"><em>Listen</em></h2>
+    <a href="https://soundcloud.com/seddler/seddler-synthetic-breath-radiozora-guest-mix"><span>Radiozora — Synthetic Breath (Guest Mix 2026)</span><span class="mono">Soundcloud →</span></a>
+    <a href="https://soundcloud.com/seddler/ufo-bufo-10th-anniversary-2025"><span>UFO BUFO 2025 — Live Set</span><span class="mono">Soundcloud →</span></a>
+    <a href="https://soundcloud.com/seddler/morning-techno-ymphony-circle-of-rave-sisyphos-reopening-2024"><span>Sisyphos Berlin — Morning Symphony</span><span class="mono">Soundcloud →</span></a>
+    <a href="https://youtu.be/K6hYgSA38Uw"><span>Live Video — SEDDLER</span><span class="mono">YouTube →</span></a>
+  </div></section>
+
+  <!-- LIVE / PROOF -->
+  <section><div class="wrap">
+    <h2 class="sec">On <em>stage</em></h2>
+    <div class="grid">
+      <div class="photo-slot"><img src="img/seddler/epk_crowd.png" alt="SEDDLER live"></div>
+      <div class="photo-slot"><img src="img/seddler/epk_booth.png" alt="SEDDLER at the booth"></div>
+      <div class="photo-slot"><img src="img/seddler/epk_hardware.png" alt="SEDDLER hardware"></div>
+    </div>
+  </div></section>
+
+  <!-- TECH -->
+  <section><div class="wrap">
+    <h2 class="sec">Tech <em>rider</em></h2>
+    <p class="lead">Hybrid DJ set — performs from a DJ controller + Maschine groovebox via a hi-end DAC and analog signal path. Standard club booth (2× CDJs + mixer) or controller setup. Full technical &amp; hospitality rider on request.</p>
+  </div></section>
+
+  <!-- BOOKING -->
+  <section><div class="wrap">
+    <h2 class="sec">Book <em>SEDDLER</em></h2>
+    <p class="lead">Booking via Vertigo Records. Fee on request — based on date, region and travel. Available across the EU.</p>
+    <a class="cta" href="mailto:info.vertigorecords@gmail.com">info.vertigorecords@gmail.com</a>
+  </div></section>
+
+  <hr class="wave">
+  <footer><div class="wrap">
+    <div class="logo">SEDDLER<span class="crimson">.</span></div>
+    <div class="socials mono">
+      <a href="https://soundcloud.com/seddler">soundcloud.com/seddler</a>
+      <a href="https://www.instagram.com/seddler.denys/">instagram.com/seddler.denys</a>
+      <a href="https://vertigorecords.bandcamp.com">vertigorecords.bandcamp.com</a>
+    </div>
+    <div class="mono" style="margin-top:22px;color:#3a3a3a">Vertigo Records · Berlin</div>
+  </div></footer>
+
+</body>
+</html>
