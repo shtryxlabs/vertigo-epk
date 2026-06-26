@@ -668,5 +668,18 @@ const VERTIGO_CATALOG = [
   grid.addEventListener('click', onCardClick);
   if (essentialGrid) essentialGrid.addEventListener('click', onCardClick);
 
+  // Collapsible full catalog (homepage shows Essential by default)
+  const toggle = document.querySelector('[data-catalog-toggle]');
+  const full = document.querySelector('[data-catalog-full]');
+  const toggleWrap = document.querySelector('[data-catalog-toggle-wrap]');
+  if (toggle && full) {
+    toggle.addEventListener('click', () => {
+      full.hidden = false;
+      if (toggleWrap) toggleWrap.style.display = 'none';
+      const firstFilter = full.querySelector('.catalog-filter');
+      if (firstFilter) firstFilter.focus();
+    });
+  }
+
   render();
 })();

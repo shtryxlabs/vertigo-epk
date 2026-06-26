@@ -68,7 +68,9 @@
   .card .link{display:inline-block;margin-top:18px;color:#fff;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
   .listen-row{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
   @media(max-width:820px){.listen-row{grid-template-columns:1fr}}
-  .release{min-height:280px;background:
+  .listen-stats{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 6px}
+  .listen-stats span{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#c8c1e4;border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 9px}
+  .release{min-height:auto;background:
     radial-gradient(460px 240px at 50% 20%,rgba(255,75,196,.18),transparent),
     radial-gradient(420px 220px at 50% 60%,rgba(34,214,255,.14),transparent),
     rgba(255,255,255,.035)}
@@ -116,6 +118,10 @@
   .catalog-cap strong{display:block;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:14px;line-height:1.12;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .catalog-cap em{display:block;margin-top:3px;color:#9d95bf;font-style:normal;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .catalog-empty{display:none;margin-top:18px;color:#aaa1d0}
+  .catalog-toggle-wrap{margin-top:8px}
+  .catalog-toggle{display:inline-flex;align-items:center;min-height:48px;padding:13px 24px;border-radius:999px;border:1px solid rgba(34,214,255,.4);background:rgba(34,214,255,.08);color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;cursor:pointer;transition:.2s}
+  .catalog-toggle:hover{background:rgba(34,214,255,.16);border-color:rgba(34,214,255,.7)}
+  .catalog-full[hidden]{display:none}
   /* quick-view modal */
   .qv-backdrop{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(4,3,10,.74);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .22s}
   .qv-backdrop.open{opacity:1;pointer-events:auto}
@@ -199,19 +205,20 @@
           <p class="section-copy">Bandcamp is the direct home for the label catalog. Streaming is for discovery; direct support keeps the label moving.</p>
         </div>
         <div class="listen-row">
-          <a class="card release" href="https://vertigorecords.bandcamp.com/">
-            <div class="mono">Catalog</div>
-            <h3>Vertigo Records on Bandcamp</h3>
-            <p>Releases, compilations, archive gems, and direct support for the label.</p>
+          <a class="card release" href="https://vertigorecords.bandcamp.com/" target="_blank" rel="noopener">
+            <div class="mono">Catalog · Bandcamp</div>
+            <h3>Buy &amp; stream the full catalog</h3>
+            <p>79 releases — albums, EPs, compilations and anniversary editions. Direct support, lossless audio, real ownership.</p>
+            <div class="listen-stats"><span>79 releases</span><span>2006–2026</span><span>Goa · Psy · Techno</span></div>
             <span class="link">Open Bandcamp -></span>
           </a>
           <div class="card">
-            <div class="mono">Platforms</div>
+            <div class="mono">Follow / Listen</div>
             <div class="platforms" style="margin-top:18px">
-              <a href="https://soundcloud.com/vertigo-records">SoundCloud</a>
-              <a href="https://vertigorecords.bandcamp.com/">Bandcamp</a>
-              <a href="https://www.instagram.com/vertigo.records/">Instagram</a>
-              <a href="https://www.facebook.com/VertigoRec">Facebook</a>
+              <a href="https://soundcloud.com/vertigo-records" target="_blank" rel="noopener">SoundCloud</a>
+              <a href="https://vertigorecords.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
+              <a href="https://www.instagram.com/vertigo.records/" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.facebook.com/VertigoRec" target="_blank" rel="noopener">Facebook</a>
             </div>
           </div>
         </div>
@@ -245,19 +252,24 @@
           </div>
           <div class="essential-grid" data-essential-grid></div>
         </div>
-        <div class="catalog-controls">
-          <div class="catalog-filters" aria-label="Catalog filters">
-            <button class="catalog-filter is-active" type="button" data-filter="all">All</button>
-            <button class="catalog-filter" type="button" data-filter="essential">Essential</button>
-            <button class="catalog-filter" type="button" data-filter="compilation">VA / Compilations</button>
-            <button class="catalog-filter" type="button" data-filter="artist">Artist Albums</button>
-            <button class="catalog-filter" type="button" data-filter="single">Singles / EPs</button>
-            <button class="catalog-filter" type="button" data-filter="archive">Archive Series</button>
-          </div>
-          <input class="catalog-search" type="search" data-catalog-search placeholder="Search catalog" aria-label="Search catalog">
+        <div class="catalog-toggle-wrap" data-catalog-toggle-wrap>
+          <button class="catalog-toggle" type="button" data-catalog-toggle>Browse the full catalog — all 79 releases -></button>
         </div>
-        <div class="catalog-grid" data-catalog-grid aria-live="polite"></div>
-        <p class="catalog-empty" data-catalog-empty>No matching releases.</p>
+        <div class="catalog-full" data-catalog-full hidden>
+          <div class="catalog-controls">
+            <div class="catalog-filters" aria-label="Catalog filters">
+              <button class="catalog-filter is-active" type="button" data-filter="all">All</button>
+              <button class="catalog-filter" type="button" data-filter="essential">Essential</button>
+              <button class="catalog-filter" type="button" data-filter="compilation">VA / Compilations</button>
+              <button class="catalog-filter" type="button" data-filter="artist">Artist Albums</button>
+              <button class="catalog-filter" type="button" data-filter="single">Singles / EPs</button>
+              <button class="catalog-filter" type="button" data-filter="archive">Archive Series</button>
+            </div>
+            <input class="catalog-search" type="search" data-catalog-search placeholder="Search catalog" aria-label="Search catalog">
+          </div>
+          <div class="catalog-grid" data-catalog-grid aria-live="polite"></div>
+          <p class="catalog-empty" data-catalog-empty>No matching releases.</p>
+        </div>
         <noscript>
           <p class="section-copy" style="margin-top:18px">Open the full catalog on Bandcamp: https://vertigorecords.bandcamp.com/music</p>
         </noscript>
