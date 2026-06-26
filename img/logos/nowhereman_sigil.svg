@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Nowhereman founder sigil</title>
+  <desc id="desc">Cosmic vortex founder sigil for Nowhereman.</desc>
+  <rect width="1024" height="1024" fill="#06070D"/>
+  <defs>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E7D4A2" stop-opacity="0.95"/>
+      <stop offset="20%" stop-color="#D8A542" stop-opacity="0.55"/>
+      <stop offset="52%" stop-color="#54358C" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#06070D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#core)"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="512" cy="512" r="332" stroke="#D8A542" stroke-width="8"/>
+    <circle cx="512" cy="512" r="254" stroke="#C8BDE6" stroke-opacity="0.48" stroke-width="4"/>
+    <circle cx="512" cy="512" r="156" stroke="#54358C" stroke-width="5"/>
+    <path d="M512 188 C760 188 846 378 714 512 C582 646 420 596 456 492 C492 388 618 426 588 512 C558 598 430 598 360 512 C290 426 354 286 512 286" stroke="#D8A542" stroke-width="9"/>
+    <ellipse cx="512" cy="512" rx="390" ry="112" stroke="#B33CCF" stroke-opacity="0.52" stroke-width="5"/>
+    <path d="M512 292 L640 734 L512 650 L384 734 Z" stroke="#E7D4A2" stroke-width="6"/>
+  </g>
+  <circle cx="512" cy="512" r="12" fill="#E7D4A2"/>
+</svg>

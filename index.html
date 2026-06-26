@@ -4,6 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vertigo Records — Booking</title>
+<meta name="description" content="Vertigo Records — Berlin psychedelic & techno label, est. 2006. Booking for SEDDLER, klePSYdra & Nowhereman. Three worlds, one vortex.">
+<link rel="icon" href="img/vertigo_logo.png">
+<meta name="theme-color" content="#06040E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vertigo Records">
+<meta property="og:title" content="Vertigo Records — Artist Booking 2026">
+<meta property="og:description" content="Berlin psychedelic & techno label, est. 2006. Booking for SEDDLER, klePSYdra & Nowhereman.">
+<meta property="og:url" content="https://shtryxlabs.github.io/vertigo-epk/">
+<meta property="og:image" content="https://shtryxlabs.github.io/vertigo-epk/img/og/vertigo_og.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vertigo Records — Artist Booking 2026">
+<meta name="twitter:description" content="Berlin psychedelic & techno label, est. 2006. Booking for SEDDLER, klePSYdra & Nowhereman.">
+<meta name="twitter:image" content="https://shtryxlabs.github.io/vertigo-epk/img/og/vertigo_og.png">
 <link rel="stylesheet" href="fonts.css">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
@@ -36,13 +51,36 @@
   .foot{margin-top:50px;font-size:13px;color:#8c84b0}
   .foot a{color:#cfc7f0;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18)}
   .foot a:hover{color:#FF7BD0;border-color:#FF7BD0}
+
+  /* ---- premium layer ---- */
+  html{scroll-behavior:smooth}
+  ::selection{background:#A24BFF;color:#fff}
+  body::after{content:"";position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+  .page{position:relative}
+  .page::before{content:"";position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:620px;max-width:120%;height:520px;z-index:-1;pointer-events:none;
+    background:radial-gradient(closest-side,rgba(162,75,255,.20),rgba(255,123,208,.07) 55%,transparent 75%);
+    filter:blur(8px);animation:aura 9s ease-in-out infinite alternate}
+  @keyframes aura{from{opacity:.7;transform:translateX(-50%) scale(.96)}to{opacity:1;transform:translateX(-50%) scale(1.06)}}
+  @keyframes floatup{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+  .eyebrow,.logo,.sub,.cards a.card,.tagline,.pills{opacity:0;animation:floatup .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .eyebrow{animation-delay:.05s}.logo{animation-delay:.14s}.sub{animation-delay:.24s}
+  .cards a.card:nth-child(1){animation-delay:.34s}.cards a.card:nth-child(2){animation-delay:.44s}.cards a.card:nth-child(3){animation-delay:.54s}
+  .tagline{animation-delay:.64s}.pills{animation-delay:.74s}
+  a.card,a.pill,.foot a{outline-offset:3px}
+  a.card:focus-visible{outline:2px solid #A24BFF}a.pill:focus-visible,.foot a:focus-visible{outline:2px solid #FF7BD0}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .page::before{animation:none}
+    .eyebrow,.logo,.sub,.cards a.card,.tagline,.pills{opacity:1;animation:none}
+  }
 </style>
 </head>
 <body>
 <div class="page">
 
   <div class="eyebrow">Berlin · Psychedelic / Techno · Est. 2006</div>
-  <img class="logo" src="img/vertigo_logo.png" alt="Vertigo Records">
+  <img class="logo" src="img/logos/vertigo_full_black.png" alt="Vertigo Records">
   <div class="sub">Artist booking · 2026</div>
 
   <div class="cards">
