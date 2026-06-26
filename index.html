@@ -6,76 +6,87 @@
 <title>Vertigo Records — Booking</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Syne:wght@700;800&family=Space+Mono&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Syne:wght@700;800&family=Space+Grotesk:wght@500;700&family=Manrope:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#070510;color:#EDEAF6;font-family:'Manrope',sans-serif;font-weight:300;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 20px;text-align:center}
-  .mono{font-family:'Space Mono',monospace;letter-spacing:.22em;text-transform:uppercase;font-size:12px;color:#8a82b8}
-  .brand{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(40px,9vw,88px);line-height:1;background:linear-gradient(90deg,#22D6FF,#A24BFF,#FF4BC4);-webkit-background-clip:text;background-clip:text;color:transparent;margin:16px 0 6px}
-  .sub{color:#b7afe0;font-size:16px;margin-bottom:46px}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:760px;width:100%}
-  a.card{display:block;text-decoration:none;color:inherit;border:1px solid #221a3a;border-radius:16px;padding:34px 26px;background:#0d0a1c;transition:.2s}
-  a.card:hover{border-color:#A24BFF;transform:translateY(-3px)}
-  a.card .name{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:30px;letter-spacing:.01em}
-  a.card .syne{font-family:'Syne',sans-serif;font-weight:800;text-transform:none}
-  a.card .desc{color:#9c93c8;font-size:14px;margin-top:8px}
-  a.card .go{display:inline-block;margin-top:18px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#22D6FF}
-  .double{max-width:760px;margin:18px auto 0;color:#8a82b8;font-size:14px}
-  .roster{max-width:760px;width:100%;margin:48px auto 0;border-top:1px solid #1a1430;padding-top:30px}
-  .roster .lbl{margin-bottom:16px}
-  .rost-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-  a.rost{font-family:'Space Mono',monospace;font-size:13px;letter-spacing:.08em;text-decoration:none;color:#cfc7f0;border:1px solid #2a2148;border-radius:30px;padding:9px 18px;transition:.2s}
-  a.rost:hover{border-color:#FF4BC4;color:#fff}
-  .foot{margin-top:46px}
-  .foot a{color:#EDEAF6;text-decoration:none;border-bottom:1px solid #3a2f5e}
-  .foot a:hover{color:#FF4BC4;border-color:#FF4BC4}
+  body{background:#06040E;color:#E9E6F4;font-family:'Manrope',sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .page{max-width:840px;margin:0 auto;padding:72px 28px 90px;text-align:center}
+  .eyebrow{font-family:'Space Mono',monospace;letter-spacing:.28em;text-transform:uppercase;font-size:11px;color:#7a7299}
+  .logo{max-width:300px;width:64%;display:block;margin:26px auto 22px;mix-blend-mode:screen}
+  .sub{color:#9a92c0;font-size:15px;font-weight:300;letter-spacing:.01em}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:54px 0 30px}
+  @media(max-width:640px){.cards{grid-template-columns:1fr}}
+  a.card{display:flex;flex-direction:column;align-items:center;justify-content:space-between;min-height:188px;text-decoration:none;color:inherit;
+    border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:30px 18px;background:rgba(255,255,255,.018);transition:.25s}
+  a.card:hover{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.16);transform:translateY(-2px)}
+  .nm{height:42px;display:flex;align-items:center;justify-content:center}
+  .nm.seddler{font-family:'Anton',sans-serif;font-size:27px;letter-spacing:.01em;color:#fff}
+  .nm.klep{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff}
+  .nm.klep b{color:#FF8A5B;font-weight:800}
+  .nm.now{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;letter-spacing:.07em;color:#E7D4A2}
+  .desc{color:#8c84b0;font-size:13px;margin-top:12px;font-weight:300}
+  .view{margin-top:auto;padding-top:16px;font-size:12px;letter-spacing:.04em;color:#a99cf0}
+  a.card:hover .view{color:#fff}
+
+  .tagline{color:#6f679a;font-size:13.5px;letter-spacing:.04em;margin-top:6px}
+  .rule{height:1px;background:rgba(255,255,255,.07);max-width:120px;margin:58px auto 34px}
+  .roster-lbl{font-family:'Space Mono',monospace;letter-spacing:.2em;text-transform:uppercase;font-size:10.5px;color:#6a6294;margin-bottom:18px}
+  .pills{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;max-width:660px;margin:0 auto}
+  a.pill{font-size:12.5px;letter-spacing:.02em;text-decoration:none;color:#b9b1dc;border:1px solid rgba(255,255,255,.09);border-radius:30px;padding:8px 15px;transition:.2s}
+  a.pill:hover{border-color:#A24BFF;color:#fff}
+  .foot{margin-top:50px;font-size:13px;color:#8c84b0}
+  .foot a{color:#cfc7f0;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18)}
+  .foot a:hover{color:#FF7BD0;border-color:#FF7BD0}
 </style>
 </head>
 <body>
-  <div class="mono">Berlin · Psychedelic / Techno · Est. 2006</div>
-  <img src="img/vertigo_logo.png" alt="Vertigo Records" style="max-width:400px;width:82%;margin:10px auto 4px;display:block;mix-blend-mode:screen">
+<div class="page">
+
+  <div class="eyebrow">Berlin · Psychedelic / Techno · Est. 2006</div>
+  <img class="logo" src="img/vertigo_logo.png" alt="Vertigo Records">
   <div class="sub">Artist booking · 2026</div>
 
   <div class="cards">
     <a class="card" href="seddler.html">
-      <div class="name">SEDDLER</div>
-      <div class="desc">Hybrid live · Techno · Tek-trance</div>
-      <div class="go">View EPK →</div>
+      <div class="nm seddler">SEDDLER</div>
+      <div class="desc">Hybrid live · Techno</div>
+      <div class="view">View EPK →</div>
     </a>
     <a class="card" href="klepsydra.html">
-      <div class="name syne">kle<span style="color:#FF8A5B">PSY</span>dra</div>
-      <div class="desc">Psytrance · Peak-time · Sunrise</div>
-      <div class="go">View EPK →</div>
+      <div class="nm klep">kle<b>PSY</b>dra</div>
+      <div class="desc">Psytrance · Sunrise</div>
+      <div class="view">View EPK →</div>
     </a>
     <a class="card" href="nowhereman.html">
-      <div class="name" style="font-size:23px;letter-spacing:.06em;color:#E7D4A2">NOWHEREMAN</div>
-      <div class="desc">Goa · Deep cosmic · Founder</div>
-      <div class="go" style="color:#D8A542">View EPK →</div>
+      <div class="nm now">NOWHEREMAN</div>
+      <div class="desc">Goa · Deep cosmic</div>
+      <div class="view">View EPK →</div>
     </a>
   </div>
 
-  <div class="double mono">Three worlds · one vortex — techno · sunrise psy · cosmic goa</div>
-  <div class="double mono" style="margin-top:6px;color:#6a6298">Double Impact — two artists, one travel cost, for multi-stage festivals</div>
+  <div class="tagline">Three worlds. One vortex.</div>
 
-  <div class="roster">
-    <div class="lbl mono">On the label · 20 years of psychedelic music</div>
-    <div class="rost-row">
-      <a class="rost" href="https://vertigorecords.bandcamp.com/">Psykovsky</a>
-      <a class="rost" href="https://vertigorecords.bandcamp.com/">OOOD</a>
-      <a class="rost" href="https://vertigorecords.bandcamp.com/">Goa Gil · The Nommos</a>
-      <a class="rost" href="https://vertigorecords.bandcamp.com/">Man With No Name</a>
-      <a class="rost" href="https://vertigorecords.bandcamp.com/">Eat Static</a>
-      <a class="rost" href="https://vertigorecords.bandcamp.com/">Ocelot</a>
-      <a class="rost" href="https://overdream.bandcamp.com/">Overdream</a>
-      <a class="rost" href="https://interconnekted.bandcamp.com/">Interconnekted</a>
-      <a class="rost" href="https://terrafractyl.bandcamp.com/">Terrafractyl</a>
-      <a class="rost" href="https://vertigorecords.bandcamp.com/">Yudhisthira</a>
-    </div>
+  <div class="rule"></div>
+
+  <div class="roster-lbl">On the label · 20 years of psychedelic music</div>
+  <div class="pills">
+    <a class="pill" href="https://vertigorecords.bandcamp.com/">Psykovsky</a>
+    <a class="pill" href="https://vertigorecords.bandcamp.com/">OOOD</a>
+    <a class="pill" href="https://vertigorecords.bandcamp.com/">Goa Gil · The Nommos</a>
+    <a class="pill" href="https://vertigorecords.bandcamp.com/">Man With No Name</a>
+    <a class="pill" href="https://vertigorecords.bandcamp.com/">Eat Static</a>
+    <a class="pill" href="https://vertigorecords.bandcamp.com/">Ocelot</a>
+    <a class="pill" href="https://overdream.bandcamp.com/">Overdream</a>
+    <a class="pill" href="https://interconnekted.bandcamp.com/">Interconnekted</a>
+    <a class="pill" href="https://terrafractyl.bandcamp.com/">Terrafractyl</a>
+    <a class="pill" href="https://vertigorecords.bandcamp.com/">Yudhisthira</a>
   </div>
 
-  <div class="foot mono">
-    Booking: <a href="mailto:info.vertigorecords@gmail.com">info.vertigorecords@gmail.com</a>
-    &nbsp;·&nbsp; <a href="https://vertigorecords.bandcamp.com/">Bandcamp</a>
+  <div class="foot">
+    Booking — <a href="mailto:info.vertigorecords@gmail.com">info.vertigorecords@gmail.com</a> &nbsp;·&nbsp; <a href="https://vertigorecords.bandcamp.com/">Bandcamp</a>
   </div>
+
+</div>
 </body>
 </html>
