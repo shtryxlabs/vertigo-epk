@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 420" role="img" aria-labelledby="title desc">
   <title id="title">NOWHEREMAN wordmark</title>
-  <desc id="desc">Deep cosmic goa wordmark for Nowhereman, Vertigo Records founder project.</desc>
+  <desc id="desc">Full-power psytrance wordmark for Nowhereman, Vertigo Records founder project.</desc>
   <defs>
     <radialGradient id="halo" cx="50%" cy="45%" r="58%">
       <stop offset="0%" stop-color="#D8A542" stop-opacity="0.34"/>
@@ -30,5 +30,5 @@
         fill="#8E84C4"
         font-family="Space Mono, monospace"
         font-size="28"
-        letter-spacing="18">DEEP COSMIC GOA</text>
+        letter-spacing="13">FULL-POWER PSYTRANCE</text>
 </svg>

@@ -21,7 +21,8 @@ const VERTIGO_CATALOG = [
     "title": "Vertigo's XXth Anniversary Compilation",
     "artist": "VA",
     "url": "https://vertigorecords.bandcamp.com/album/vertigos-xxth-anniversary-compilation",
-    "cover": "img/releases/a3248524868_2.jpeg"
+    "cover": "img/releases/a3248524868_2.jpeg",
+    "description": "Anniversary compilation and public catalog anchor for the Vertigo Records story."
   },
   {
     "title": "Modern Wizards",
@@ -39,7 +40,8 @@ const VERTIGO_CATALOG = [
     "title": "Future Frequency",
     "artist": "Interconnekted",
     "url": "https://vertigorecords.bandcamp.com/album/future-frequency",
-    "cover": "img/releases/a2255143847_2.jpeg"
+    "cover": "img/releases/a2255143847_2.jpeg",
+    "description": "Artist-release entry that shows the melodic and forward-moving side of the label catalog."
   },
   {
     "title": "Dazzle Puzzle Part 2",
@@ -159,7 +161,8 @@ const VERTIGO_CATALOG = [
     "title": "ReVertigo 3",
     "artist": "Vertigo Records",
     "url": "https://vertigorecords.bandcamp.com/album/revertigo-3",
-    "cover": "img/releases/a2499543852_2.jpeg"
+    "cover": "img/releases/a2499543852_2.jpeg",
+    "description": "Archive-series release for listeners who want a direct route into Vertigo history."
   },
   {
     "title": "EP - Storming minds",
@@ -273,7 +276,8 @@ const VERTIGO_CATALOG = [
     "title": "ReVertiGo",
     "artist": "VA",
     "url": "https://vertigorecords.bandcamp.com/album/revertigo",
-    "cover": "img/releases/a1649462059_2.jpeg"
+    "cover": "img/releases/a1649462059_2.jpeg",
+    "description": "Compilation marker from the ReVertigo archive line, useful as label-history proof."
   },
   {
     "title": "Time For Solution",
@@ -387,7 +391,8 @@ const VERTIGO_CATALOG = [
     "title": "Dream Selector",
     "artist": "Ocelot",
     "url": "https://vertigorecords.bandcamp.com/album/dream-selector",
-    "cover": "img/releases/a2665402312_2.jpeg"
+    "cover": "img/releases/a2665402312_2.jpeg",
+    "description": "Focused artist album pick for the deeper psychedelic side of the Vertigo catalog."
   },
   {
     "title": "Peace and Love",
@@ -405,7 +410,8 @@ const VERTIGO_CATALOG = [
     "title": "The Night Tribe",
     "artist": "Vertigo Records",
     "url": "https://vertigorecords.bandcamp.com/album/the-night-tribe",
-    "cover": "img/releases/a2752481297_2.jpeg"
+    "cover": "img/releases/a2752481297_2.jpeg",
+    "description": "Early-catalog archive pick with strong title identity and classic label-world energy."
   },
   {
     "title": "Rules of Ohm",
@@ -423,7 +429,8 @@ const VERTIGO_CATALOG = [
     "title": "Debut",
     "artist": "Vertigo Records",
     "url": "https://vertigorecords.bandcamp.com/album/debut",
-    "cover": "img/releases/a0793753108_2.jpeg"
+    "cover": "img/releases/a0793753108_2.jpeg",
+    "description": "Foundational archive release for telling the label story from the beginning."
   },
   {
     "title": "AcidSport",
@@ -471,7 +478,8 @@ const VERTIGO_CATALOG = [
     "title": "Oddball (Uptempo ReRub)",
     "artist": "OOOD",
     "url": "https://vertigorecords.bandcamp.com/track/oddball-uptempo-rerub",
-    "cover": "img/releases/a2979101662_2.jpeg"
+    "cover": "img/releases/a2979101662_2.jpeg",
+    "description": "Single-track essential pick that works well as a quick entry point into the catalog."
   }
 ];
 
@@ -618,6 +626,7 @@ const VERTIGO_CATALOG = [
         '<div class="qv-type"></div>' +
         '<div class="qv-title"></div>' +
         '<div class="qv-artist"></div>' +
+        '<div class="qv-desc"></div>' +
         '<div class="qv-actions">' +
           '<a class="qv-btn primary" target="_blank" rel="noopener">Listen / Buy on Bandcamp</a>' +
         '</div>' +
@@ -629,6 +638,7 @@ const VERTIGO_CATALOG = [
     type: modal.querySelector('.qv-type'),
     title: modal.querySelector('.qv-title'),
     artist: modal.querySelector('.qv-artist'),
+    desc: modal.querySelector('.qv-desc'),
     buy: modal.querySelector('.qv-btn'),
     close: modal.querySelector('.qv-close')
   };
@@ -641,6 +651,7 @@ const VERTIGO_CATALOG = [
     qv.type.textContent = t.label;
     qv.title.textContent = release.title;
     qv.artist.textContent = release.artist;
+    qv.desc.textContent = release.description || 'Direct Vertigo Records catalog release on Bandcamp.';
     qv.buy.href = release.url;
     lastFocus = document.activeElement;
     modal.classList.add('open');
