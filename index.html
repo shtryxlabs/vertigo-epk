@@ -550,13 +550,8 @@
       <button class="vr-close" data-vr-close aria-label="Close radio">✕</button>
     </div>
   </div>
-  <iframe id="sc-radio" allow="autoplay" style="display:none" title="Vertigo Radio engine"
-    src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fseddler%2Fseddler-synthetic-breath-radiozora-guest-mix&visual=false"></iframe>
-
-  <script src="https://w.soundcloud.com/player/api.js"></script>
   <script>
   (function(){
-    // MODE "mixes" — Track A: curated DJ sets & guest mixes (reach funnel).
     var ROTATION = [
       {artist:'SEDDLER',   title:'RadiOzora — Synthetic Breath (Guest Mix 2026)',  url:'https://soundcloud.com/seddler/seddler-synthetic-breath-radiozora-guest-mix'},
       {artist:'klePSYdra', title:'RadiOzora — Winter Solstice Light (Exclusive)',   url:'https://soundcloud.com/klepsydramusic/winter-solstice-light-radiozora-exclusive-guest-mix'},
@@ -572,90 +567,59 @@
       {artist:'klePSYdra', title:'Plakore — Montenegro (2024)',                     url:'https://soundcloud.com/klepsydramusic/plakore-montenegro-dj-mix-2024'},
       {artist:'Nowhereman',title:'Delirious Noon & Nowhereman — Wonderful Days',    url:'https://soundcloud.com/vertigo-records/delirious-noon-nowhereman'}
     ];
-    // MODE "all" — Track B reach: shuffle the WHOLE label catalogue. Swap this to any SC profile.
     var ALL_TRACKS_URL = 'https://soundcloud.com/vertigo-records';
 
     var bar = document.getElementById('vradio');
-    if(!bar || !window.SC) return;
-    var widget  = SC.Widget(document.getElementById('sc-radio'));
+    if(!bar) return;
     var elArtist= bar.querySelector('[data-vr-artist]');
     var elTitle = bar.querySelector('[data-vr-title]');
     var elBar   = bar.querySelector('[data-vr-bar]');
     var elToggle= bar.querySelector('[data-vr-toggle]');
     var elSC    = bar.querySelector('[data-vr-sc]');
-    var elSeek  = bar.querySelector('[data-vr-seek]');
     var elMode  = bar.querySelector('[data-vr-mode-label]');
-    var idx=0, playing=false, started=false, mode='mixes', shuffleLen=0;
+    var idx=0, mode='mixes';
 
-    function setToggle(on){ playing=on; elToggle.textContent = on ? '❚❚' : '▶'; }
-    function setModeLabel(){ elMode.textContent = (mode==='all') ? 'Shuffle' : 'Mixes'; }
+    function setModeLabel(){ elMode.textContent = (mode==='all') ? 'SoundCloud' : 'Mixes'; }
     function paintMix(){
-      var t=ROTATION[idx];
-      elArtist.textContent=t.artist; elTitle.textContent=t.title; elSC.href=t.url; elBar.style.width='0%';
+      var t=(mode==='all') ? {artist:'Vertigo Records',title:'Full catalogue on SoundCloud',url:ALL_TRACKS_URL} : ROTATION[idx];
+      elArtist.textContent=t.artist;
+      elTitle.textContent=t.title;
+      elSC.href=t.url;
+      elBar.style.width='100%';
     }
-    function refreshCurrent(){ // now-playing for shuffle mode (tracks unknown ahead of time)
-      widget.getCurrentSound(function(s){
-        if(!s) return;
-        elArtist.textContent=(s.user&&s.user.username)||'Vertigo Records';
-        elTitle.textContent=s.title||'';
-        if(s.permalink_url) elSC.href=s.permalink_url;
-      });
-    }
-    function randSkip(){ if(shuffleLen>1) widget.skip(Math.floor(Math.random()*shuffleLen)); }
-
-    widget.bind(SC.Widget.Events.PLAY, function(){ setToggle(true); if(mode==='all') refreshCurrent(); });
-    widget.bind(SC.Widget.Events.PAUSE, function(){ setToggle(false); });
-    widget.bind(SC.Widget.Events.FINISH, function(){ advance(true); });
-    widget.bind(SC.Widget.Events.PLAY_PROGRESS, function(e){
-      if(e && e.relativePosition!=null) elBar.style.width=(e.relativePosition*100)+'%';
-    });
 
     function startMixes(){
       mode='mixes'; setModeLabel(); idx=0; paintMix();
-      widget.load(ROTATION[idx].url,{auto_play:true,visual:false,callback:function(){setToggle(true);}});
     }
     function startAll(){
       mode='all'; setModeLabel();
-      elArtist.textContent='Vertigo Records'; elTitle.textContent='Loading full catalogue…'; elBar.style.width='0%';
-      widget.load(ALL_TRACKS_URL,{auto_play:true,visual:false,callback:function(){
-        widget.getSounds(function(list){
-          shuffleLen=(list&&list.length)||0; randSkip(); setToggle(true); refreshCurrent();
-        });
-      }});
+      paintMix();
     }
-    function advance(auto){
-      if(mode==='all'){ shuffleLen>1 ? randSkip() : (widget.seekTo(0),widget.play()); }
-      else { idx=(idx+1)%ROTATION.length; paintMix();
-        widget.load(ROTATION[idx].url,{auto_play:auto!==false,visual:false,callback:function(){setToggle(true);}}); }
+    function advance(){
+      if(mode==='all') return;
+      idx=(idx+1)%ROTATION.length;
+      paintMix();
     }
     function back(){
-      if(mode==='all'){ randSkip(); }
-      else { idx=(idx-1+ROTATION.length)%ROTATION.length; paintMix();
-        widget.load(ROTATION[idx].url,{auto_play:true,visual:false,callback:function(){setToggle(true);}}); }
+      if(mode==='all') return;
+      idx=(idx-1+ROTATION.length)%ROTATION.length;
+      paintMix();
     }
     function open(target){
       bar.classList.add('open');
-      if(!started || target!==mode){ started=true; (target==='all'?startAll:startMixes)(); }
-      else if(!playing){ widget.play(); }
+      (target==='all'?startAll:startMixes)();
     }
 
     document.querySelectorAll('[data-vr-launch]').forEach(function(b){
       b.addEventListener('click', function(){ open(b.getAttribute('data-vr-mode')||'mixes'); });
     });
     elToggle.addEventListener('click', function(){
-      if(!started){ open('mixes'); return; }
-      // Ask the widget for its REAL state — local flag can lag behind load/autoplay events.
-      widget.isPaused(function(p){ p ? widget.play() : widget.pause(); });
+      bar.classList.add('open');
+      window.open(elSC.href, '_blank', 'noopener');
     });
-    bar.querySelector('[data-vr-next]').addEventListener('click', function(){ advance(true); });
+    bar.querySelector('[data-vr-next]').addEventListener('click', advance);
     bar.querySelector('[data-vr-prev]').addEventListener('click', back);
-    bar.querySelector('[data-vr-close]').addEventListener('click', function(){ widget.pause(); bar.classList.remove('open'); });
-    elSeek.addEventListener('click', function(ev){
-      if(!started) return;
-      var r=elSeek.getBoundingClientRect();
-      var ratio=Math.min(1,Math.max(0,(ev.clientX-r.left)/r.width));
-      widget.getDuration(function(d){ if(d) widget.seekTo(Math.floor(d*ratio)); });
-    });
+    bar.querySelector('[data-vr-close]').addEventListener('click', function(){ bar.classList.remove('open'); });
     paintMix(); setModeLabel();
   })();
   </script>
