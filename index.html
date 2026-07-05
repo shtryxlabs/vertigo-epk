@@ -11,14 +11,14 @@
 <meta property="og:site_name" content="Vertigo Records">
 <meta property="og:title" content="Vertigo Records — Berlin Psychedelic Label">
 <meta property="og:description" content="Independent psychedelic label from Berlin — releasing music and booking live artists since 2004.">
-<meta property="og:url" content="https://shtryxlabs.github.io/vertigo-epk/">
-<meta property="og:image" content="https://shtryxlabs.github.io/vertigo-epk/img/og/vertigo_og.png">
+<meta property="og:url" content="https://vertigorec.com/">
+<meta property="og:image" content="https://vertigorec.com/img/og/vertigo_og.png">
 <meta property="og:image:width" content="2400">
 <meta property="og:image:height" content="1260">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Vertigo Records — Berlin Psychedelic Label">
 <meta name="twitter:description" content="Independent psychedelic label from Berlin — releasing music and booking live artists since 2004.">
-<meta name="twitter:image" content="https://shtryxlabs.github.io/vertigo-epk/img/og/vertigo_og.png">
+<meta name="twitter:image" content="https://vertigorec.com/img/og/vertigo_og.png">
 <link rel="stylesheet" href="fonts.css">
 <style>
   :root{
@@ -38,14 +38,28 @@
   .nav-links a{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#aaa1d0;border:0}
   .nav-links a:hover{color:#fff}
 
-  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.07)}
-  .hero::before{content:"";position:absolute;inset:-20%;background:
-    radial-gradient(800px 520px at 50% 42%,rgba(162,75,255,.35),transparent 68%),
-    radial-gradient(560px 420px at 42% 48%,rgba(255,75,196,.28),transparent 64%),
-    radial-gradient(560px 420px at 58% 48%,rgba(34,214,255,.24),transparent 64%),
-    radial-gradient(900px 520px at 50% 90%,rgba(216,165,66,.10),transparent 70%);
-    opacity:.95}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--void),rgba(6,4,14,.34) 54%,rgba(6,4,14,.78))}
+  /* ONE site-wide fixed background video — shared by every block except the hero, never duplicated */
+  .bg-site{position:fixed;top:0;left:0;width:100%;height:100vh;object-fit:cover;z-index:0;pointer-events:none}
+  @media(prefers-reduced-motion:reduce){.bg-site,.hero-video{display:none}}
+  @media(max-width:900px){.hero{padding:90px 18px 32px}}
+
+  .hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:70px 32px 32px;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.07)}
+  /* hero's OWN video — lives inside the hero, scrolls away with it (top block only) */
+  .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
+  /* legibility scrim over the video, behind the text */
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;background:
+    linear-gradient(105deg,rgba(6,4,14,.74),rgba(6,4,14,.32) 52%,rgba(6,4,14,.12) 76%),
+    linear-gradient(to top,rgba(6,4,14,.9),rgba(6,4,14,0) 44%)}
+  .hero-block{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;text-align:left;max-width:720px;width:100%;margin:0 auto}
+  .hero-block .logo{width:min(300px,64vw);margin:0 0 18px}
+  .hl{font-family:'Space Grotesk',sans-serif;display:flex;flex-wrap:wrap;gap:.25em;font-size:clamp(30px,5.2vw,62px);font-weight:700;line-height:1.03;letter-spacing:-.01em;text-transform:uppercase;color:#fff;margin:14px 0 0}
+  .hl .w{display:inline-block;opacity:0;transform:translateY(32px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+  .hero-block .lead{max-width:360px;margin:24px 0 0;color:rgba(255,255,255,.85);font-size:15px;line-height:1.65;opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);transition-delay:.9s}
+  .hero-block .actions{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);transition-delay:1.05s}
+  .hero-block.in .w{opacity:1;transform:none}
+  .hero-block.in .lead,.hero-block.in .actions{opacity:1;transform:none}
+  /* lower content sits above the site video with a dark wash so the video stays visible but text keeps contrast */
+  .page-shell{position:relative;z-index:1;background:rgba(6,4,14,.76)}
   .hero-in{position:relative;z-index:2;padding:86px 0 70px;text-align:center}
   .logo{display:block;width:min(360px,70vw);height:auto;margin:0 auto 22px}
   h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(42px,8vw,92px);line-height:.96;letter-spacing:.02em;color:#fff}
@@ -145,7 +159,7 @@
   .pill{font-size:12.5px;color:#c6bfdf;border:1px solid rgba(255,255,255,.10);border-radius:999px;padding:8px 14px;background:rgba(255,255,255,.025)}
   .support{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
   @media(max-width:820px){.support{grid-template-columns:1fr}}
-  footer{padding:54px 0 72px;text-align:center;color:#8d85b4}
+  footer{position:relative;z-index:1;background:rgba(6,4,14,.76);padding:54px 0 72px;text-align:center;color:#8d85b4}
   footer a{border-bottom:1px solid rgba(255,255,255,.16)}
   footer a:hover{color:#fff;border-color:#fff}
   .legal{margin-top:14px;font-size:12px}
@@ -166,6 +180,9 @@
 </style>
 </head>
 <body>
+  <video class="bg-site" autoplay muted loop playsinline preload="metadata" poster="video/site_bg_poster.jpg" aria-hidden="true">
+    <source src="video/site_bg.mp4" type="video/mp4">
+  </video>
   <nav class="nav">
     <div class="wrap">
       <a class="nav-brand" href="#top">VERTIGO RECORDS</a>
@@ -184,11 +201,19 @@
 
   <main id="top">
     <section class="hero">
-      <div class="wrap hero-in">
-        <img class="logo" src="img/logos/vertigo_full_transparent_clean.png?v=transparent-20260626" alt="Vertigo Records">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="video/logo_portal_poster.jpg" aria-hidden="true">
+        <source src="video/logo_portal.mp4" type="video/mp4">
+      </video>
+      <div class="hero-block">
         <div class="mono">Berlin · Psychedelic / Psytrance · Est. 2004</div>
-        <h1>Two decades of<br>psychedelic music.</h1>
-        <p class="lead">Vertigo Records is an independent psychedelic label from Berlin — releasing music and booking live artists since 2004.</p>
+        <h2 class="hl" aria-label="Two decades of psychedelic music.">
+          <span class="w" style="transition-delay:.15s">Two</span>
+          <span class="w" style="transition-delay:.23s">decades</span>
+          <span class="w" style="transition-delay:.31s">of</span>
+          <span class="w" style="transition-delay:.39s">psychedelic</span>
+          <span class="w" style="transition-delay:.47s">music.</span>
+        </h2>
+        <p class="lead">Independent psychedelic label from Berlin — releasing music and booking live artists since 2004.</p>
         <div class="actions">
           <a class="btn primary" href="#releases">Explore Catalog</a>
           <a class="btn" href="#booking">Artist Booking</a>
@@ -196,6 +221,7 @@
       </div>
     </section>
 
+    <div class="page-shell">
     <section id="listen">
       <div class="wrap">
         <div class="section-head">
@@ -454,6 +480,7 @@
         </div>
       </div>
     </section>
+    </div><!-- /.page-shell -->
   </main>
 
   <footer>
@@ -626,6 +653,18 @@
   })();
   </script>
   <!-- ===== /Vertigo Radio ===== -->
+  <script>
+    /* Hero: staggered word fade-up when the block scrolls into view (whileInView, once) */
+    (function(){
+      var block = document.querySelector('.hero-block');
+      if(!block) return;
+      if(!('IntersectionObserver' in window)){ block.classList.add('in'); return; }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ block.classList.add('in'); io.disconnect(); } });
+      }, { threshold: 0.2 });
+      io.observe(block);
+    })();
+  </script>
   <script src="catalog-data.js"></script>
 </body>
 </html>
