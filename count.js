@@ -7,7 +7,7 @@
 	if (navigator.doNotTrack === '1') return        // honour Do Not Track
 	if (location.hostname === 'localhost' || location.protocol === 'file:') return
 
-	var endpoint = 'https://vertigorecords-com.goatcounter.com/count'
+	var endpoint = 'https://vertigorec.goatcounter.com/count'
 	var q = [
 		'p=' + encodeURIComponent(location.pathname),
 		't=' + encodeURIComponent(document.title),
