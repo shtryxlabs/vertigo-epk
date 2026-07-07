@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>klePSYdra — EPK</title>
 <meta name="description" content="klePSYdra — peak-time & sunrise psytrance from Berlin. Light, driving, hypnotic. Booking via Vertigo Records, available across the EU.">
+<link rel="canonical" href="https://vertigorec.com/klepsydra.html">
 <link rel="icon" href="img/vertigo_logo.png">
 <meta name="theme-color" content="#FFF8EA">
 <meta property="og:type" content="website">
@@ -13,6 +14,7 @@
 <meta property="og:description" content="Light, driving, peak-time and morning psytrance. Booking via Vertigo Records — Berlin, est. 2004.">
 <meta property="og:url" content="https://vertigorec.com/klepsydra.html">
 <meta property="og:image" content="https://vertigorec.com/img/klepsydra/epk_hero.png">
+<meta property="og:image:width" content="1672"><meta property="og:image:height" content="941">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="klePSYdra — Psytrance · Peak-time · Sunrise">
 <meta name="twitter:description" content="Light, driving, peak-time and morning psytrance. Booking via Vertigo Records.">
@@ -20,77 +22,136 @@
 <link rel="stylesheet" href="fonts.css">
 <style>
   :root{
-    --black:#1a1208; --cream:#FFF8EA; --sand:#F2D6A2; --gold:#F6B73C;
-    --coral:#FF6B5F; --pink:#F45BC4; --violet:#7B3FF2; --aqua:#22D6C7; --ink:#2a1d0c;
+    --cream:#FFF8EA; --sand:#F2D6A2; --gold:#F6B73C; --coral:#FF6B5F; --pink:#F45BC4;
+    --violet:#7B3FF2; --aqua:#22D6C7; --ink:#2a1d0c; --line:#efe2c8; --muted:#9a7f4e;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--cream);color:var(--ink);font-family:'Manrope',sans-serif;font-weight:300;line-height:1.65}
-  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
-  .syne{font-family:'Syne',sans-serif}
-  .mono{font-family:'Space Mono',monospace;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:#9a7f4e}
-  a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--sand);transition:.2s}
-  a:hover{color:var(--coral);border-color:var(--coral)}
-  .grad{background:linear-gradient(90deg,var(--gold),var(--coral),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
-  section{padding:64px 0;border-bottom:1px solid #efe2c8}
-  hr.wave{height:3px;border:0;background:linear-gradient(90deg,transparent,var(--gold),var(--coral),var(--pink),transparent);margin:0}
-
-  .hero{position:relative;min-height:74vh;display:flex;align-items:flex-end;overflow:hidden}
-  .hero-photo{position:absolute;inset:0;background:linear-gradient(to top,rgba(255,248,234,.92),rgba(255,248,234,.15) 55%,rgba(255,248,234,.30)),url("img/klepsydra/epk_hero.png");background-size:cover;background-position:center}
-  .hero-in{position:relative;z-index:2;padding:46px 0}
-  .hero h1{font-size:clamp(56px,12vw,128px);font-weight:800;line-height:.95;letter-spacing:-.01em}
-  .hero h1 .psy{font-weight:800}
-  .hero-logo{display:block;width:min(760px,92vw);height:auto;margin:14px 0 12px}
-  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  .hero .tag{margin-top:10px;font-size:clamp(13px,2.2vw,17px)}
-  .meta{display:flex;gap:26px;flex-wrap:wrap;margin-top:18px}
-
-  h2.sec{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(28px,5vw,46px);margin-bottom:22px}
-  p.lead{font-size:18px;color:#5a4a2e;max-width:70ch}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:26px}
-  .card{background:#fffdf6;border:1px solid #efe2c8;padding:22px;border-radius:14px}
-  .card .big{font-family:'Syne',sans-serif;font-weight:700;font-size:20px;line-height:1.15;margin-top:6px}
-  .listen a{display:flex;justify-content:space-between;align-items:center;padding:16px 4px;border:0;border-bottom:1px solid #efe2c8;font-size:17px}
-  .listen a:hover{padding-left:10px}
-  .photo-slot{border-radius:14px;overflow:hidden;height:260px;border:1px solid #efe2c8}
-  .photo-slot img{width:100%;height:100%;object-fit:cover;display:block}
-  .cta{display:inline-block;margin-top:8px;background:linear-gradient(90deg,var(--gold),var(--coral));color:#3a1500;font-family:'Syne',sans-serif;font-weight:700;font-size:18px;padding:16px 34px;border-radius:40px;border:0}
-  .cta:hover{filter:brightness(1.06)}
-  footer{padding:54px 0 80px;text-align:center}
-  footer .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:32px}
-  footer .logo-img{display:block;width:min(420px,82vw);height:auto;margin:0 auto}
-  .socials{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:16px;font-size:14px}
-
-  /* ---- premium layer ---- */
   html{scroll-behavior:smooth}
-  ::selection{background:var(--coral);color:#fff}
-  body::after{content:"";position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
-  .backlink{position:fixed;top:16px;left:16px;z-index:90;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#9a7f4e;background:rgba(255,248,234,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid #efe2c8;padding:8px 13px;border-radius:30px}
-  .backlink:hover{color:var(--coral);border-color:var(--coral)}
-  .hero-photo{animation:kenburns 26s ease-in-out infinite alternate;transform-origin:60% 40%}
-  @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.085)}}
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
+  :target{scroll-margin-top:76px}
+  body{background:var(--cream);color:var(--ink);font-family:'Manrope',sans-serif;font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .syne{font-family:'Syne',sans-serif}
+  .mono{font-family:'Space Mono',monospace;letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:var(--muted)}
+  .grad{background:linear-gradient(90deg,var(--gold),var(--coral),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+  a{color:var(--ink);text-decoration:none;transition:.2s}
+  :focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+  section{padding:88px 0;border-bottom:1px solid var(--line);position:relative}
+
+  /* TOP BAR */
+  .top{position:fixed;top:0;left:0;right:0;z-index:40;height:60px;display:flex;align-items:center;
+    background:linear-gradient(to bottom,rgba(255,248,234,.85),rgba(255,248,234,0));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+  .top .back{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);display:inline-flex;gap:8px}
+  .top .back:hover{color:var(--coral)}
+  .top .book{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#3a1500;font-weight:700;
+    background:linear-gradient(90deg,var(--gold),var(--coral));padding:10px 16px;border-radius:40px}
+  .top .book:hover{filter:brightness(1.06)}
+
+  /* HERO */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+  .hero-photo{position:absolute;inset:0;z-index:-4;background:url("img/klepsydra/epk_hero.webp") center/cover no-repeat;
+    animation:kenburns 30s ease-in-out infinite alternate;transform-origin:62% 40%}
+  @keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+  .hero-grade{position:absolute;inset:0;z-index:-3;
+    background:linear-gradient(to top,var(--cream) 3%,rgba(255,248,234,.72) 26%,rgba(255,248,234,.12) 54%,rgba(255,248,234,.28))}
+  .hero-bloom{position:absolute;top:30%;left:60%;width:56vmax;height:56vmax;translate:-50% -50%;z-index:-3;border-radius:50%;pointer-events:none;
+    background:radial-gradient(circle,rgba(246,183,60,.28),rgba(255,107,95,.14) 44%,transparent 70%);filter:blur(30px);
+    animation:sunpulse 6s ease-in-out infinite}
+  @keyframes sunpulse{0%,100%{opacity:.7;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.12)}}
+  .motes{position:absolute;inset:0;z-index:-2;pointer-events:none}
+  .motes span{position:absolute;bottom:-8px;width:3px;height:3px;border-radius:50%;background:var(--gold);opacity:0;
+    box-shadow:0 0 7px var(--gold);animation:mote 11s linear infinite}
+  @keyframes mote{0%{opacity:0;transform:translateY(0)}14%{opacity:.85}100%{opacity:0;transform:translateY(-72vh)}}
+  .hero-in{position:relative;z-index:2;padding:0 0 64px;width:100%}
+  .hero .ey{margin-bottom:16px;opacity:0;animation:fade 1s ease .1s forwards}
+  .hero-logo{display:block;width:min(720px,92vw);height:auto;margin:4px 0 12px;opacity:0;animation:rise 1s cubic-bezier(.2,.7,.2,1) .2s forwards;
+    filter:drop-shadow(0 8px 30px rgba(42,29,12,.18))}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .hero .tag{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(15px,2.4vw,24px);color:#4a3618;opacity:0;animation:fade 1s ease .45s forwards}
+  .hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;opacity:0;animation:fade 1s ease .6s forwards}
+  .hero-meta span{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#5a4a2e;
+    background:rgba(255,253,246,.7);border:1px solid var(--line);padding:8px 13px;border-radius:40px}
+  .hero-cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fade 1s ease .75s forwards}
+  @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+  @keyframes fade{to{opacity:1}}
+
+  .btn{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;padding:14px 28px;border-radius:40px;transition:.22s;display:inline-flex;align-items:center;gap:9px;border:1px solid transparent}
+  .btn.primary{background:linear-gradient(90deg,var(--gold),var(--coral));color:#3a1500;box-shadow:0 10px 30px -10px rgba(255,107,95,.5)}
+  .btn.primary:hover{transform:translateY(-2px);filter:brightness(1.05)}
+  .btn.ghost{border-color:var(--sand);color:var(--ink);background:rgba(255,253,246,.6)}
+  .btn.ghost:hover{border-color:var(--coral);color:var(--coral)}
+
+  h2.sec{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(30px,5.4vw,58px);margin-bottom:24px;line-height:1}
+  p.lead{font-size:18px;color:#5a4a2e;max-width:66ch;line-height:1.75}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:32px}
+  .card{background:#fffdf6;border:1px solid var(--line);padding:24px;border-radius:16px;transition:border-color .25s,transform .25s,box-shadow .25s}
+  .card:hover{border-color:var(--coral);transform:translateY(-4px);box-shadow:0 16px 40px -20px rgba(255,107,95,.4)}
+  .card .mono{margin-bottom:10px}
+  .card .big{font-family:'Syne',sans-serif;font-weight:700;font-size:20px;line-height:1.15;margin-top:4px}
+  .listen a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 4px;border-bottom:1px solid var(--line);font-size:clamp(15px,1.9vw,19px)}
+  .listen a .lb{transition:padding-left .25s}
+  .listen a .lb::before{content:"▶";color:var(--coral);font-size:11px;margin-right:14px}
+  .listen a:hover .lb{padding-left:14px;color:var(--coral)}
+  .listen a .go{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+  .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+  .photo{aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line);border-radius:16px}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .photo:hover img{transform:scale(1.07)}
+
+  footer{padding:64px 0 84px;text-align:center;border-bottom:0}
+  footer::before{content:"";display:block;height:3px;background:linear-gradient(90deg,transparent,var(--gold),var(--coral),var(--pink),transparent);margin:0 0 48px}
+  footer .logo-img{display:block;width:min(400px,80vw);height:auto;margin:0 auto}
+  .socials{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:22px;font-family:'Space Mono',monospace;font-size:12px}
+  .socials a{color:var(--muted)} .socials a:hover{color:var(--coral)}
+  .legal{margin-top:22px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.1em;color:#c4ad7e}
+  .legal a{color:var(--muted)} .legal a:hover{color:var(--coral)}
+
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
-  a:focus-visible,.cta:focus-visible,.backlink:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
-  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-photo{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+  ::selection{background:var(--coral);color:#fff}
+  body::after{content:"";position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.04;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  @media(max-width:760px){ .photos{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto} .top .book{display:none} }
+  @media(prefers-reduced-motion:reduce){
+    .hero-photo,.hero-bloom,.motes span{animation:none!important}
+    .hero .ey,.hero-logo,.hero .tag,.hero-meta,.hero-cta{opacity:1;animation:none}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
 </style>
 </head>
 <body>
 
-  <a class="backlink" href="index.html">↩ Vertigo</a>
-
-  <div class="hero">
-    <div class="hero-photo"></div>
-    <div class="wrap hero-in">
-      <div class="mono">Berlin · Vertigo Records</div>
-      <h1 class="syne sr-only">klePSYdra</h1>
-      <img class="hero-logo" src="img/logos/klepsydra_primary_black_transparent.png?v=transparent-20260626" alt="klePSYdra">
-      <div class="tag mono">Psytrance · Peak-time · Sunrise</div>
-      <div class="meta mono"><span>Available for 2026</span><span>Festivals · Main-stage · Morning</span></div>
+  <div class="top">
+    <div class="wrap">
+      <a class="back" href="index.html">↩ Vertigo Records</a>
+      <a class="book" href="#book">Book klePSYdra →</a>
     </div>
   </div>
 
-  <section><div class="wrap">
+  <header class="hero">
+    <div class="hero-photo"></div>
+    <div class="hero-grade"></div>
+    <div class="hero-bloom"></div>
+    <div class="motes" aria-hidden="true"></div>
+    <div class="wrap hero-in">
+      <div class="mono ey">Berlin · Vertigo Records</div>
+      <h1 class="syne sr-only">klePSYdra</h1>
+      <img class="hero-logo" src="img/logos/klepsydra_primary_black_transparent.png?v=transparent-20260626" alt="klePSYdra" width="720" height="200" fetchpriority="high">
+      <div class="tag">Psytrance · Peak-time · Sunrise</div>
+      <div class="hero-meta">
+        <span>Available for 2026</span>
+        <span>Festivals · Main-stage · Morning</span>
+        <span>Double Impact with SEDDLER</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn primary" href="#book">Book klePSYdra →</a>
+        <a class="btn ghost" href="#listen">Listen ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about"><div class="wrap">
     <h2 class="sec">The <span class="grad">artist</span></h2>
     <p class="lead">klePSYdra is the psytrance project of Denys — DJ and current head of Vertigo Records (Berlin, est. 2004). The main set is full-power, crystal-clear main-time psychedelic for peak hours and main stages; on request, a funky morning / daytime psy-progressive set for sunrise floors.</p>
     <div class="grid">
@@ -100,52 +161,62 @@
     </div>
   </div></section>
 
-  <section><div class="wrap listen">
+  <section id="listen"><div class="wrap listen">
     <h2 class="sec"><span class="grad">Listen</span></h2>
-    <a href="https://soundcloud.com/klepsydramusic/winter-solstice-light-radiozora-exclusive-guest-mix"><span>Main set — full-power psychedelic · Radiozora Winter Solstice Light</span><span class="mono">Soundcloud →</span></a>
-    <a href="https://soundcloud.com/klepsydramusic/klepsydra-taj-psy-festival-dj-mix-2024"><span>Optional — morning funk psy-prog · Taj Psy Festival DJ Mix 2024</span><span class="mono">Soundcloud →</span></a>
-    <a href="https://soundcloud.com/klepsydramusic"><span>klePSYdra on SoundCloud</span><span class="mono">Soundcloud →</span></a>
+    <a href="https://open.spotify.com/artist/2qePMzUT9FvUiOyIGvdJvo" target="_blank" rel="noopener"><span class="lb">klePSYdra on Spotify</span><span class="go">Spotify ↗</span></a>
+    <a href="https://vertigorecords.bandcamp.com" target="_blank" rel="noopener"><span class="lb">Vertigo Records on Bandcamp</span><span class="go">Bandcamp ↗</span></a>
+    <a href="https://soundcloud.com/klepsydramusic/winter-solstice-light-radiozora-exclusive-guest-mix" target="_blank" rel="noopener"><span class="lb">Main set — full-power psychedelic · Radiozora Winter Solstice Light</span><span class="go">Soundcloud ↗</span></a>
+    <a href="https://soundcloud.com/klepsydramusic/klepsydra-taj-psy-festival-dj-mix-2024" target="_blank" rel="noopener"><span class="lb">Optional — morning funk psy-prog · Taj Psy Festival DJ Mix 2024</span><span class="go">Soundcloud ↗</span></a>
+    <a href="https://soundcloud.com/klepsydramusic" target="_blank" rel="noopener"><span class="lb">klePSYdra on SoundCloud</span><span class="go">Soundcloud ↗</span></a>
   </div></section>
 
-  <section><div class="wrap">
+  <section id="stage"><div class="wrap">
     <h2 class="sec">On <span class="grad">stage</span></h2>
-    <div class="grid">
-      <div class="photo-slot"><img src="img/klepsydra/epk_crowd.png" alt="klePSYdra festival sunrise"></div>
-      <div class="photo-slot"><img src="img/klepsydra/epk_deck.png" alt="klePSYdra live"></div>
-      <div class="photo-slot"><img src="img/klepsydra/epk_portrait.png" alt="klePSYdra"></div>
+    <div class="photos">
+      <div class="photo"><img src="img/klepsydra/epk_crowd.webp" alt="klePSYdra festival sunrise" loading="lazy"></div>
+      <div class="photo"><img src="img/klepsydra/epk_deck.webp" alt="klePSYdra live" loading="lazy"></div>
+      <div class="photo"><img src="img/klepsydra/epk_portrait.webp" alt="klePSYdra" loading="lazy"></div>
     </div>
   </div></section>
 
-  <section><div class="wrap">
+  <section id="rider"><div class="wrap">
     <h2 class="sec">Tech <span class="grad">rider</span></h2>
     <p class="lead">Standard psytrance booth — 2× CDJs + mixer, or controller setup. Full technical and hospitality rider on request. Berlin-based, travels across the EU.</p>
   </div></section>
 
-  <section><div class="wrap">
+  <section id="book"><div class="wrap">
     <h2 class="sec">Book <span class="grad">klePSYdra</span></h2>
     <p class="lead">Booking via Vertigo Records. Fee on request — based on date, region and travel. Double Impact package available with SEDDLER (techno) for multi-stage festivals.</p>
-    <a class="cta" href="mailto:klepsydra@vertigorec.com">klepsydra@vertigorec.com</a>
+    <div class="hero-cta" style="opacity:1;animation:none;margin-top:26px">
+      <a class="btn primary" href="mailto:klepsydra@vertigorec.com">klepsydra@vertigorec.com</a>
+    </div>
   </div></section>
 
-  <hr class="wave">
   <footer><div class="wrap">
     <img class="logo-img" src="img/logos/klepsydra_primary_black_transparent.png?v=transparent-20260626" alt="klePSYdra">
-    <div class="socials mono">
-      <a href="https://soundcloud.com/klepsydramusic">soundcloud.com/klepsydramusic</a>
-      <a href="https://www.instagram.com/klepsydra.psytrance/">instagram.com/klepsydra.psytrance</a>
-      <a href="https://vertigorecords.bandcamp.com">vertigorecords.bandcamp.com</a>
+    <div class="socials">
+      <a href="https://soundcloud.com/klepsydramusic" target="_blank" rel="noopener">soundcloud.com/klepsydramusic</a>
+      <a href="https://www.instagram.com/klepsydra.psytrance/" target="_blank" rel="noopener">instagram.com/klepsydra.psytrance</a>
+      <a href="https://vertigorecords.bandcamp.com" target="_blank" rel="noopener">vertigorecords.bandcamp.com</a>
     </div>
-    <div class="mono" style="margin-top:20px;color:#c4ad7e">Vertigo Records · Berlin</div>
-    <div class="mono" style="margin-top:10px"><a href="impressum.html" style="color:#9a7f4e;border:0">Impressum</a> · <a href="datenschutz.html" style="color:#9a7f4e;border:0">Datenschutz</a></div>
+    <div class="legal">Vertigo Records · Berlin &nbsp;·&nbsp; <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div>
   </div></footer>
 
   <script>
   (function(){
-    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    if(!reduce){
+      var m=document.querySelector('.motes');
+      if(m){var f=document.createDocumentFragment();
+        for(var i=0;i<20;i++){var s=document.createElement('span');
+          s.style.left=(i*137.5%100)+'%';s.style.animationDelay=(i%10)*1.0+'s';s.style.animationDuration=(9+(i%6))+'s';
+          if(i%4===0){s.style.background='var(--coral)';s.style.boxShadow='0 0 7px var(--coral)'}
+          f.appendChild(s);} m.appendChild(f);}
+    }
     var els=document.querySelectorAll('section');
     els.forEach(function(s){s.classList.add('reveal')});
-    if(!('IntersectionObserver'in window)){els.forEach(function(s){s.classList.add('in')});return}
-    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    if(reduce||!('IntersectionObserver'in window)){els.forEach(function(s){s.classList.add('in')});return}
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
     els.forEach(function(s){io.observe(s)});
   })();
   </script>
